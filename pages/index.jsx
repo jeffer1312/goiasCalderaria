@@ -20,34 +20,40 @@ export default function Home() {
       justifyContent="center"
       alignItems="start"
     >
-      <Flex gridArea="header" backgroundColor="green.700">
-        <Flex width="50%" alignContent="center" justifyContent="start">
-          <Link href="/"> </Link>
-          <img className="logo" src="/logo.png" alt=""></img>
-        </Flex>
+      <Flex
+        className="background-menu"
+        gridArea="header"
+        backgroundColor="green.700"
+      >
+        <Flex className="layer-menu">
+          <Flex width="50%" alignContent="center" justifyContent="start">
+            <Link href="/"> </Link>
+            <img className="logo" src="/logo.png" alt=""></img>
+          </Flex>
 
-        <Flex
-          width="40%"
-          gridArea="menu"
-          alignItems="center"
-          justifyContent="flex-end"
-        >
-          <ul className="menu">
-            <Flex>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="#">A Empresa</Link>
-              </li>
-              <li>
-                <Link href="#">Serviços</Link>
-              </li>
-              <li>
-                <Link href="#">Contato</Link>
-              </li>
-            </Flex>
-          </ul>
+          <Flex
+            width="40%"
+            gridArea="menu"
+            alignItems="center"
+            justifyContent="flex-end"
+          >
+            <ul className="menu">
+              <Flex>
+                <li>
+                  <Link href="/">Home</Link>
+                </li>
+                <li>
+                  <Link href="#">A Empresa</Link>
+                </li>
+                <li>
+                  <Link href="/servicos">Serviços</Link>
+                </li>
+                <li>
+                  <Link href="#">Contato</Link>
+                </li>
+              </Flex>
+            </ul>
+          </Flex>
         </Flex>
       </Flex>
 
