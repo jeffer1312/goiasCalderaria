@@ -1,19 +1,23 @@
 //import Head from "next/head";
 import { Flex, Grid, Heading, List, ListItem, Text } from "@chakra-ui/core";
 import Link from "next/link";
-import Typical from "react-typical";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination } from "swiper";
 
+import Typical from "react-typical";
+SwiperCore.use([Pagination]);
 function servicos() {
   return (
     <Grid
       background="#f3f3df"
       as="main"
-      height="100vh"
+      height="100%"
       templateColumns="1fr 720px 720px 1fr"
-      templateRows="9.7%  1fr 1fr"
+      templateRows="9.7% 2fr 1fr"
       templateAreas="
       'header header header header'
-      '. servicos servicos .'
+      'servicos servicos servicos servicos'
+      
       'footer footer footer footer'
       "
       justifyContent="center"
@@ -45,7 +49,7 @@ function servicos() {
                   <Link href="#">A Empresa</Link>
                 </li>
                 <li>
-                  <Link href="#">Serviços</Link>
+                  <Link href="/servicos">Serviços</Link>
                 </li>
                 <li>
                   <Link href="#">Contato</Link>
@@ -56,22 +60,24 @@ function servicos() {
         </Flex>
       </Flex>
 
+      {/* servicos */}
+
       <Flex flexDirection="column" gridArea="servicos">
         <Flex justifyContent="center">
           <Heading marginTop="60px" fontSize="6xl" color="rgb(130,130,130)">
-            Nossos Serviços
+            Produtos e Serviços
           </Heading>
         </Flex>
         <Flex justifyContent="center">
           <div className="separator"></div>
         </Flex>
 
-        <Flex flexWrap="wrap" className="container">
-          <Flex
-            flexDirection="column"
-            justifyContent="center"
-            className="image-text"
-          >
+        <Flex
+          flexDirection="row"
+          justifyContent="center"
+          className="card-Services"
+        >
+          <Flex flexDirection="column">
             <Heading textAlign="start" fontSize="2xl" paddingLeft="10%">
               Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
               Tubulações
@@ -83,14 +89,69 @@ function servicos() {
               voluptatum quisquam, rerum iusto dolorum totam.
             </Text>
           </Flex>
-          <Flex className="card" width="30%" flexDirection="column">
+          <Flex width="35%">
+            <Swiper
+              className="card-service-image"
+              slidesPerView={1}
+              autoplay
+              pagination={{ clickable: true }}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              <SwiperSlide>
+                <img
+                  src="/fabricação e monteagem de estrutura-metalica .jpg"
+                  alt=""
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/fabricação e monteagem de estrutura-metalica .jpg"
+                  alt=""
+                />
+              </SwiperSlide>
+              ...
+            </Swiper>
+          </Flex>
+          {/* <Flex
+            className="card-service-image"
+            width="40%"
+            flexDirection="column"
+          >
             <img
               src="/fabricação e monteagem de estrutura-metalica .jpg"
               alt=""
             />
-          </Flex>
+          </Flex> */}
         </Flex>
       </Flex>
+      {/* fim servicos */}
+      {/* Images e descriçao */}
+
+      {/* <Flex className="imagesServ" width="35%">
+              <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                autoplay
+                pagination={{ clickable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+              >
+                <SwiperSlide>
+                  <img
+                    src="/fabricação e monteagem de estrutura-metalica .jpg"
+                    alt=""
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="/fabricação e monteagem de estrutura-metalica .jpg"
+                    alt=""
+                  />
+                </SwiperSlide>
+                ...
+              </Swiper>
+            </Flex> */}
+
+      {/* Fim Images e descriçao */}
 
       <Flex
         justifyContent="center"
