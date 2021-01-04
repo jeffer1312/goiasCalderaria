@@ -37,27 +37,40 @@ export default function Home() {
         backgroundColor="#129e38"
       >
         {/* Card de Descrição */}
-        <Flex className="container">
-          <Flex
-            width={[
-              "100%", // 0-30em
-              "50%", // 30em-48em
-              "33%", // 48em-62em
-              // 62em+
-            ]}
-            justifyContent="center"
-            flexDirection="column"
-          >
+        <Flex
+          className="container"
+          width={[
+            "33%", // 0-30em
+            "50%", // 30em-48em
+            "100%", // 48em-62em
+            // 62em+
+          ]}
+        >
+          <Flex justifyContent="center" flexDirection="column">
             <Flex justifyContent="center" flexDirection="column">
               <Text
                 textAlign="center"
                 color="white"
                 fontWeight="bold"
-                fontSize="1.5rem"
+                fontSize={{
+                  base: "1.3rem",
+                  md: "1.3rem",
+                  lg: "1.4rem",
+                  xl: "1.5rem",
+                }}
               >
                 QUALIDADE
               </Text>
-              <Text color="white" fontSize="1.3rem" textAlign="center">
+              <Text
+                color="white"
+                textAlign="center"
+                fontSize={{
+                  base: "1.1rem",
+                  md: "0.8rem",
+                  lg: "1.0rem",
+                  xl: "1.3rem",
+                }}
+              >
                 Busca diária pela excelência no produto final.{" "}
               </Text>
             </Flex>
@@ -65,27 +78,32 @@ export default function Home() {
           <Flex className="separatorVertical"></Flex>
           {/* Card de Descrição */}
 
-          <Flex
-            width={[
-              "100%", // 0-30em
-              "50%", // 30em-48em
-              "33%", // 48em-62em
-              // 62em+
-            ]}
-            align="center"
-            justifyContent="center"
-            flexDirection="column"
-          >
+          <Flex align="center" justifyContent="center" flexDirection="column">
             <Flex justifyContent="center" flexDirection="column">
               <Text
                 textAlign="center"
                 color="white"
                 fontWeight="bold"
-                fontSize="1.5rem"
+                fontSize={{
+                  base: "1.3rem",
+                  md: "1.0rem",
+                  lg: "1.3rem",
+                  xl: "1.5rem",
+                }}
               >
                 ASSISTÊNCIA
               </Text>
-              <Text color="white" fontSize="1.3rem" textAlign="center">
+              <Text
+                color="white"
+                fontSize="1.3rem"
+                textAlign="center"
+                fontSize={{
+                  base: "1.1rem",
+                  md: "0.8rem",
+                  lg: "1.0rem",
+                  xl: "1.3rem",
+                }}
+              >
                 Oferecemos assistência técnica especializada em campo.
               </Text>
             </Flex>
@@ -109,11 +127,25 @@ export default function Home() {
                 textAlign="center"
                 color="white"
                 fontWeight="bold"
-                fontSize="1.5rem"
+                fontSize={{
+                  base: "1.3rem",
+                  md: "1.0rem",
+                  lg: "1.3rem",
+                  xl: "1.5rem",
+                }}
               >
                 AGILIDADE
               </Text>
-              <Text color="white" fontSize="1.3rem" textAlign="center">
+              <Text
+                color="white"
+                textAlign="center"
+                fontSize={{
+                  base: "1.1rem",
+                  md: "0.8rem",
+                  lg: "1.0rem",
+                  xl: "1.3rem",
+                }}
+              >
                 Agilidade é necessária para um retorno rápido ao nosso cliente.
               </Text>
             </Flex>
