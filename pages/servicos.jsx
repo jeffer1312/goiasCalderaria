@@ -47,7 +47,7 @@ function servicos() {
               >
                 <SwiperSlide>
                   <Image
-                    src="/fabricação e monteagem de estrutura-metalica.jpg"
+                    src="/teste1.jpg"
                     alt=""
                     width={600}
                     height={350}
@@ -55,7 +55,7 @@ function servicos() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <Image
-                    src="/fabricação e monteagem de estrutura-metalica.jpg"
+                    src="/teste2.jpg"
                     alt=""
                     width={600}
                     height={350}
@@ -89,7 +89,7 @@ function servicos() {
               >
                 <SwiperSlide>
                   <Image
-                    src="/fabricação e monteagem de estrutura-metalica.jpg"
+                    src="/teste1.jpg"
                     alt=""
                     width={600}
                     height={350}
@@ -97,7 +97,7 @@ function servicos() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <Image
-                    src="/fabricação e monteagem de estrutura-metalica.jpg"
+                    src="/teste3.jpg"
                     alt=""
                     width={600}
                     height={350}
@@ -130,7 +130,7 @@ function servicos() {
               >
                 <SwiperSlide>
                   <Image
-                    src="/fabricação e monteagem de estrutura-metalica.jpg"
+                    src="/teste1.jpg"
                     alt=""
                     width={600}
                     height={350}
@@ -138,7 +138,7 @@ function servicos() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <Image
-                    src="/fabricação e monteagem de estrutura-metalica.jpg"
+                    src="/teste3.jpg"
                     alt=""
                     width={600}
                     height={350}
@@ -171,7 +171,7 @@ function servicos() {
               >
                 <SwiperSlide>
                   <Image
-                    src="/fabricação e monteagem de estrutura-metalica.jpg"
+                    src="/teste1.jpg"
                     alt=""
                     width={600}
                     height={350}
@@ -179,7 +179,7 @@ function servicos() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <Image
-                    src="/fabricação e monteagem de estrutura-metalica.jpg"
+                    src="/teste2.jpg"
                     alt=""
                     width={600}
                     height={350}

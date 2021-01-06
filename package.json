@@ -14,6 +14,7 @@
     "emotion-theming": "^10.0.27",
     "google-maps-react": "^2.0.6",
     "next": "^10.0.4-canary.8",
+    "next-images": "^1.6.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-typical": "^0.1.3",

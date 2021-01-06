@@ -1,6 +1,7 @@
 import ThemeContainer from "../contexts/theme/ThemeContainer";
 import { Flex, Grid, Heading, List, ListItem, Text } from "@chakra-ui/core";
 import "./styles.css";
+
 import Link from "next/link";
 
 import "swiper/swiper.scss";

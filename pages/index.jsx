@@ -4,6 +4,7 @@ import { Flex, Heading, Text } from "@chakra-ui/core";
 import Image from "next/image";
 import Typical from "react-typical";
 
+
 export default function Home() {
   return (
     <>
@@ -167,7 +168,32 @@ export default function Home() {
         <Flex flexWrap="wrap" className="container">
           <Flex className="card" width="30%" flexDirection="column">
             <Image
-              src="/fabricação e monteagem de estrutura-metalica.jpg"
+              src='/teste1.jpg'
+              alt="teset"
+              width={200}
+              height={200}
+            />
+
+            <Flex
+              flexDirection="column"
+              justifyContent="center"
+              className="card-text"
+            >
+              <Heading textAlign="start" fontSize="2xl" paddingLeft="10%">
+                Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
+                Tubulações
+              </Heading>
+              <Text textAlign="start" padding="10%">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Exercitationem, illum. Tempora expedita maiores animi ratione
+                odit ullam alias, nesciunt nostrum sint cupiditate repellendus
+                ducimus voluptatum quisquam, rerum iusto dolorum totam.
+              </Text>
+            </Flex>
+          </Flex>
+          <Flex className="card" width="30%" flexDirection="column">
+            <Image
+              src="/teste2.jpg"
               alt=""
               width={200}
               height={200}
@@ -192,32 +218,7 @@ export default function Home() {
           </Flex>
           <Flex className="card" width="30%" flexDirection="column">
             <Image
-              src="/fabricação e monteagem de estrutura-metalica.jpg"
-              alt=""
-              width={200}
-              height={200}
-            />
-
-            <Flex
-              flexDirection="column"
-              justifyContent="center"
-              className="card-text"
-            >
-              <Heading textAlign="start" fontSize="2xl" paddingLeft="10%">
-                Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
-                Tubulações
-              </Heading>
-              <Text textAlign="start" padding="10%">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Exercitationem, illum. Tempora expedita maiores animi ratione
-                odit ullam alias, nesciunt nostrum sint cupiditate repellendus
-                ducimus voluptatum quisquam, rerum iusto dolorum totam.
-              </Text>
-            </Flex>
-          </Flex>
-          <Flex className="card" width="30%" flexDirection="column">
-            <Image
-              src="/fabricação e monteagem de estrutura-metalica.jpg"
+              src="/teste2.jpg"
               alt=""
               width={200}
               height={200}

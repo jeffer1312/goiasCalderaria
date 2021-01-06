@@ -50,7 +50,7 @@ export default function empresa() {
             <Swiper slidesPerView={1} autoplay pagination={{ clickable: true }}>
               <SwiperSlide>
                 <Image
-                  src="/fabricação e monteagem de estrutura-metalica.jpg"
+                  src="/teste2.jpg"
                   alt=""
                   width={800}
                   height={460}
@@ -58,7 +58,7 @@ export default function empresa() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/fabricação e monteagem de estrutura-metalica.jpg"
+                  src="/teste1.jpg"
                   alt=""
                   width={800}
                   height={460}
@@ -66,7 +66,7 @@ export default function empresa() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/fabricação e monteagem de estrutura-metalica.jpg"
+                  src="/teste3.jpg"
                   alt=""
                   width={800}
                   height={460}
@@ -74,7 +74,7 @@ export default function empresa() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/fabricação e monteagem de estrutura-metalica.jpg"
+                  src="/teste2.jpg"
                   alt=""
                   width={800}
                   height={460}
@@ -82,7 +82,7 @@ export default function empresa() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/fabricação e monteagem de estrutura-metalica.jpg"
+                  src="/teste.jpg"
                   alt=""
                   width={800}
                   height={460}
@@ -90,7 +90,7 @@ export default function empresa() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/fabricação e monteagem de estrutura-metalica.jpg"
+                  src="/teste1.jpg"
                   alt=""
                   width={800}
                   height={460}
