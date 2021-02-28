@@ -1,23 +1,56 @@
+.teste {
+  border: 1px solid red;
+}
+.textContent {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+}
+.IconContent {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+}
 .menu li {
   font-size: 1.5rem;
   list-style-type: none;
   padding: 10px;
-  color: white;
-  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 .backgroundColor {
-  background-color: #e4e4d9;
-
-  background-image: url(https://yata.ostr.locaweb.com.br/dd05d3b150d0fa655899671e5ba66298ca59e01c1c0b5f4d571fc3482c42f371);
+  background-color: #ffffff;
+  /*background-color: #e4e4d9;
+   background-image: url('../public/fundo.png');
   background-size: auto auto;
   background-repeat: repeat;
-  background-position: center top;
+  background-position: center top; */
+}
+.redText {
+  color: #1e91d6;
 }
 .container {
   padding: 0 2%;
   margin: 0 auto;
   width: 100%;
   max-width: 1440px;
+}
+.box-empresa {
+  border: 2px solid red;
+  height: 410px;
+}
+.title-box-empresa {
+  background-color: red;
+  color: #fff;
+  height: 50px;
+  width: 100%;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
 }
 .container-services {
   border: 1px solid red;
@@ -61,10 +94,7 @@ input[type='email'] {
   -o-border-radius: 5px;
 }
 .card-service-image {
-  border: 6px solid rgb(230, 230, 230);
   border-radius: 30px;
-
-  box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
 
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -90,9 +120,30 @@ input[type='email'] {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+@keyframes menu {
+  50% {
+    background-color: rgb(37, 26, 26);
+    border-radius: 5px;
+    color: rgb(212, 212, 93);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  100% {
+    background-color: black;
+    border-radius: 10px;
+    color: yellow;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
 
 .menu li:hover {
-  color: blueviolet;
+  animation: menu 1s forwards;
+  -webkit-animation: menu 1s forwards;
 }
 
 .logo {
@@ -123,22 +174,26 @@ input[type='email'] {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.background-menu {
-  background-image: url('../public/background1.jpg');
+.background-logo {
+  background-image: url('../public/menucima.png');
   width: 100%;
   height: 100%;
   grid-area: header;
-  background-attachment: fixed;
+  color: white;
+  font-weight: bold;
+}
+.background-menu {
+  background-image: url('../public/menubaixo.png');
+  width: 100%;
+  opacity: 0.85;
 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
+  grid-area: menu;
 }
 .layer-menu {
   width: 100%;
 
   grid-area: header;
-  background-color: rgba(255, 0, 0, 0.2);
 }
 .separator {
   width: 200px;
@@ -184,6 +239,40 @@ input[type='email'] {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.card-servicos {
+  margin: 1%;
+  width: 25%;
+  height: 80%;
+  border-radius: 30px;
+  background: #1e91d6;
+  transition: 1s;
+  color: #fff;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.card-servicos:hover {
+  border-radius: 5px;
+  /* animation: menu 1s forwards; */
+  /* background: #0c0f0a; */
+  background-color: rgb(37, 26, 26);
+  color: rgb(212, 212, 93);
+  width: 26%;
+  height: 81%;
+
+  /* color: #f46036; */
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
 .image-text {
   width: 40%;
   padding-top: 5%;

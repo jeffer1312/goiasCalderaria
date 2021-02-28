@@ -24,10 +24,18 @@ const customTheme = {
   },
   colors: {
     ...theme.colors,
-
+    green: {
+      300: "#BCDE16",
+      700: "#129e38",
+      800: "#2E4D2E",
+    },
     purple: {
       ...theme.colors.purple,
       500: "#8257e5",
+    },
+    yellow: {
+      300: "#fde910",
+      500: "#F4F434",
     },
     gray: {
       ...theme.colors.gray,
