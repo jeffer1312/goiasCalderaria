@@ -15,10 +15,10 @@ function MyApp({ Component, pageProps }) {
           as='main'
           height='100%'
           templateColumns='1fr 720px 720px 1fr'
-          templateRows='180px 56px auto auto 1fr auto'
+          templateRows='56px 180px  auto auto 1fr auto'
           templateAreas="
-      'header header header header' 
-      'menu menu menu menu'     
+      'menu menu menu menu'
+      'header header header header'            
       'content content content content'      
       'initialContent initialContent initialContent initialContent'
       '. servicos servicos .'
@@ -34,7 +34,12 @@ function MyApp({ Component, pageProps }) {
                 <img className='logo' src='/logo.png' alt=''></img>
               </Flex>
 
-              <Flex color='#000' width='40%' alignItems='center' justifyContent='flex-end'>
+              <Flex
+                color='#000'
+                width='40%'
+                alignItems='center'
+                justifyContent='flex-end'
+              >
                 <ul>
                   <Text>Rua SB13, qd 42 lote 19, 75830-000</Text>
                   <p>Mineiros - GO</p>
@@ -43,11 +48,7 @@ function MyApp({ Component, pageProps }) {
               </Flex>
             </Flex>
           </Flex>
-          <Flex
-            className='background-menu'
-            width='100%'
-            
-          >
+          <Flex className='background-menu' width='100%'>
             <Flex width='43%' alignItems='center' justifyContent='flex-end'>
               <ul className='menu'>
                 <Flex>
@@ -75,6 +76,7 @@ function MyApp({ Component, pageProps }) {
             flexDirection='column'
             gridArea='footer'
             className='footer'
+            backgroundColor='#e6e4e4'
             // backgroundColor='#129e38'
           >
             <Flex justifyContent='center' className='logoFooter'>

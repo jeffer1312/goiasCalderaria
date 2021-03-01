@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
 .teste {
   border: 1px solid red;
 }
@@ -13,7 +16,9 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 5px;
 }
-
+.menu {
+  font-family: 'Akaya Telivigala', cursive;
+}
 .menu li {
   font-size: 1.5rem;
   list-style-type: none;
@@ -27,7 +32,7 @@ body {
   -o-transition: 1s;
 }
 .backgroundColor {
-  background-color: #ffffff;
+  background-color: #fff;
   /*background-color: #e4e4d9;
    background-image: url('../public/fundo.png');
   background-size: auto auto;
@@ -190,7 +195,8 @@ input[type='email'] {
   font-weight: bold;
 }
 .background-menu {
-  background-color: #1e91d6;
+  background-color: #0c0f0a;
+  /* background-color: #1e91d6; */
   /* background-image: url('../public/menubaixo.png'); */
   width: 100%;
   /* opacity: 0.85; */
