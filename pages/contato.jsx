@@ -1,28 +1,61 @@
-import { Flex, List, ListItem, Heading, Text } from "@chakra-ui/core";
+import {
+  Flex,
+  List,
+  ListItem,
+  Heading,
+  Text,
+  Input,
+  FormControl,
+  Form,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Textarea,
+} from '@chakra-ui/core';
 
-import { Map, GoogleApiWrapper } from "google-maps-react";
-import Image from "next/image";
-import MapContainer from "./map";
+import { Map, GoogleApiWrapper } from 'google-maps-react';
+import Image from 'next/image';
+import MapContainer from './map';
 
 export default function contato() {
   return (
-    <Flex justifyContent="center" gridArea="content">
+    <Flex justifyContent='center' gridArea='content'>
       <Flex
-        flexDirection="column"
-        justifyContent="center"
-        className="container"
+        flexDirection='column'
+        justifyContent='center'
+        className='container'
       >
-        <Flex width="100%" flexDirection="column">
+        <Flex width='100%' flexDirection='column'>
           <Heading
-            textAlign="left"
-            marginTop="60px"
-            fontSize="4xl"
-            color="rgb(130,130,130)"
+            textAlign='left'
+            marginTop='60px'
+            fontSize='4xl'
+            color='rgb(130,130,130)'
           >
-            Fale Conosco
+            Entre em contato conosco
           </Heading>
+
+          <Text>
+            A Goias Caldeiraria está localizada na cidade de Mineiros – GO,
+            entre em contato e retornaremos o mais breve possível.
+          </Text>
+          <form>
+            <FormControl id='Nome'>
+              <FormLabel>Nome</FormLabel>
+              <Input type='nome' />
+            </FormControl>
+            <FormControl id='email'>
+              <FormLabel>Email address</FormLabel>
+              <Input type='email' />
+            </FormControl>
+            <FormControl id='mensagem'>
+              <FormLabel>Mensagem</FormLabel>
+              <Textarea type='mensagem' />
+            </FormControl>
+          </form>
+
           <Flex>
-            <List marginLeft="1%">
+            <List marginLeft='1%'>
               <ListItem> Rua nv9 qd15 lt 25 </ListItem>
               <ListItem> Bairo Nova Republica </ListItem>
               <ListItem> Mineiros - GO </ListItem>

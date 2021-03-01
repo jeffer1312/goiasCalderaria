@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
                 <img className='logo' src='/logo.png' alt=''></img>
               </Flex>
 
-              <Flex width='40%' alignItems='center' justifyContent='flex-end'>
+              <Flex color='#000' width='40%' alignItems='center' justifyContent='flex-end'>
                 <ul>
                   <Text>Rua SB13, qd 42 lote 19, 75830-000</Text>
                   <p>Mineiros - GO</p>
@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }) {
           <Flex
             className='background-menu'
             width='100%'
-            backgroundColor='yellow.300'
+            
           >
             <Flex width='43%' alignItems='center' justifyContent='flex-end'>
               <ul className='menu'>
@@ -74,7 +74,8 @@ function MyApp({ Component, pageProps }) {
             justifyContent='center'
             flexDirection='column'
             gridArea='footer'
-            backgroundColor='#129e38'
+            className='footer'
+            // backgroundColor='#129e38'
           >
             <Flex justifyContent='center' className='logoFooter'>
               <img src='/logo.png' alt=''></img>
