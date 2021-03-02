@@ -173,11 +173,15 @@ export default function Home() {
                 </Text>
               </Flex>
 
-              <Flex padding='10%' justifyContent='center'>
+              <Flex overflow='hidden' padding='5%' justifyContent='center'>
                 <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Repudiandae fugiat magnam odit esse pariatur nostrum facilis
-                  ip.
+                  A manutenção industrial consiste num conjunto de práticas que
+                  busca fiscalizar e manter instrumentos e máquinas em pleno
+                  funcionamento. Além disso, é dever da manutenção evitar a
+                  ocorrência de acidentes que afetem os colaboradores ou o
+                  meio-ambiente. Isso significa que certos componentes vão
+                  exigir maior cuidado que outros, como tubulações de gás
+                  natural ou caldeiras industriais.
                 </Text>
               </Flex>
             </Flex>
