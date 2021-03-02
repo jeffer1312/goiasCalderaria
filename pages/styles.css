@@ -4,6 +4,9 @@
 .teste {
   border: 1px solid red;
 }
+.footer {
+  border-top: 1px solid #ccc;
+}
 html,
 body {
   height: 100%;
@@ -23,7 +26,8 @@ body {
   font-size: 1.5rem;
   list-style-type: none;
   padding: 10px;
-  color: white;
+
+  color: rgba(0, 0, 0, 0.6);
   font-weight: bold;
   transition: 1s;
   -webkit-transition: 1s;
@@ -32,8 +36,9 @@ body {
   -o-transition: 1s;
 }
 .backgroundColor {
-  background-color: #fff;
-  /*background-color: #e4e4d9;
+  background-color: #f2f2f2;
+  /* background-color: #fff; */
+  /*
    background-image: url('../public/fundo.png');
   background-size: auto auto;
   background-repeat: repeat;
@@ -152,14 +157,23 @@ input[type='email'] {
 }
 
 .menu li:hover {
-  animation: menu 1s forwards;
-  -webkit-animation: menu 1s forwards;
+  opacity: 0.3;
+  transition: all 0.4s ease-in-out;
+  /* animation: menu 1s forwards; */
+  /* -webkit-animation: menu 1s forwards; */
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
 }
 
 .logo {
-  width: 400px;
-  height: 150px;
-  margin-left: 40%;
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  max-width: 600px;
+  background-size: cover;
+  background-image: url('/logo.png');
 }
 .infoFooter {
   color: white;
@@ -176,7 +190,7 @@ input[type='email'] {
   height: 100%;
 }
 .background {
-  background-image: url('../public/background1.jpg');
+  background-image: url('../public/1.jpg');
   width: 100%;
   height: 100%;
   grid-area: content;
@@ -195,8 +209,10 @@ input[type='email'] {
   font-weight: bold;
 }
 .background-menu {
-  background-color: #0c0f0a;
-  /* background-color: #1e91d6; */
+  /* background-color: #0c0f0a; */
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  /* background-color: #1e91d6;  */
   /* background-image: url('../public/menubaixo.png'); */
   width: 100%;
   /* opacity: 0.85; */
@@ -227,7 +243,7 @@ input[type='email'] {
 }
 .layer {
   grid-area: content;
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(33, 21, 100, 0.2);
   height: 100%;
 }
 
@@ -246,7 +262,8 @@ input[type='email'] {
 }
 .card-text {
   padding-top: 5%;
-  background-color: rgba(227, 225, 225, 0.776);
+  background-color: '#fff';
+  /* background-color: rgba(227, 225, 225, 0.776); */
   height: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -258,9 +275,11 @@ input[type='email'] {
   width: 25%;
   height: 80%;
   border-radius: 30px;
-  background: #1e91d6;
+  background-color: #fff;
+  /* background: #1e91d6; */
   transition: 1s;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #1e91d6;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
@@ -272,19 +291,22 @@ input[type='email'] {
 }
 
 .card-servicos:hover {
-  border-radius: 5px;
-  /* animation: menu 1s forwards; */
-  /* background: #0c0f0a; */
-  background-color: rgb(37, 26, 26);
-  color: rgb(212, 212, 93);
+  border-radius: 8px;
+  /*animation: menu 1s forwards;
+  */
+
+  /*background-color: rgb(0, 0, 0);
+  */
+  border: 1px dotted #1e91d6;
   width: 26%;
   height: 81%;
+  color: rgba(0, 0, 0, 1);
 
-  /* color: #f46036; */
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  -webkit-border-radius: 8px;
 }
 
 .image-text {
@@ -327,9 +349,6 @@ input[type='email'] {
 
 @media (max-width: 500px) {
   .logo {
-    width: 250px;
-    height: 100px;
-    margin-left: 70%;
   }
 
   .menu {

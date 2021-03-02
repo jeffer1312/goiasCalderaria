@@ -8,7 +8,6 @@ import {
   FaFireAlt,
 } from 'react-icons/fa';
 import Image from 'next/image';
-import Typical from 'react-typical';
 
 export default function Home() {
   return (
@@ -19,12 +18,12 @@ export default function Home() {
         alignContent='center'
         justifyContent='center'
         justifyItems='center'
-        className='background'
+        className='background animate__animated animate__fadeIn'
         height={{
           base: '150px',
           md: '200px',
           lg: '350px',
-          xl: '471px',
+          xl: '561px',
         }}
       >
         <Flex

@@ -15,10 +15,11 @@ function MyApp({ Component, pageProps }) {
           as='main'
           height='100%'
           templateColumns='1fr 720px 720px 1fr'
-          templateRows='56px 180px  auto auto 1fr auto'
+          templateRows='180px 56px   auto auto 1fr auto'
           templateAreas="
-      'menu menu menu menu'
-      'header header header header'            
+          'header header header header'
+      'menu menu menu menu'     
+                 
       'content content content content'      
       'initialContent initialContent initialContent initialContent'
       '. servicos servicos .'
@@ -29,11 +30,11 @@ function MyApp({ Component, pageProps }) {
         >
           <Flex className='background-logo'>
             <Flex className='layer-menu'>
-              <Flex width='50%' alignContent='center' justifyContent='start'>
+              <Flex width='100%' alignContent='center' justifyContent='center'>
                 <Link href='/'> </Link>
-                <img className='logo' src='/logo.png' alt=''></img>
+                <Flex className='logo'></Flex>
               </Flex>
-
+              {/* 
               <Flex
                 color='#000'
                 width='40%'
@@ -45,11 +46,11 @@ function MyApp({ Component, pageProps }) {
                   <p>Mineiros - GO</p>
                   <p>(64)99618-7103/(64)99342-7147</p>
                 </ul>
-              </Flex>
+              </Flex> */}
             </Flex>
           </Flex>
           <Flex className='background-menu' width='100%'>
-            <Flex width='43%' alignItems='center' justifyContent='flex-end'>
+            <Flex width='100%' alignItems='center' justifyContent='center'>
               <ul className='menu'>
                 <Flex>
                   <li>
@@ -76,14 +77,14 @@ function MyApp({ Component, pageProps }) {
             flexDirection='column'
             gridArea='footer'
             className='footer'
-            backgroundColor='#e6e4e4'
+            backgroundColor='#fff'
             // backgroundColor='#129e38'
           >
             <Flex justifyContent='center' className='logoFooter'>
               <img src='/logo.png' alt=''></img>
             </Flex>
             <Flex justifyContent='center'>
-              <Flex className='infoFooter' flexDirection='column'>
+              <Flex color='#000' className='infoFooter' flexDirection='column'>
                 <Text>(64)99618-7103 / (64)99342-7147</Text>
                 <Text>goias.montagem@gmail.com</Text>
               </Flex>
