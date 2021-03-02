@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
                  
       'content content content content'      
       'initialContent initialContent initialContent initialContent'
-      '. servicos servicos .'
+      'servicos servicos servicos servicos'
       'footer footer footer footer'
       "
           justifyContent='center'

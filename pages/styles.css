@@ -57,6 +57,15 @@ body {
   border: 2px solid red;
   height: 410px;
 }
+.mapa-localizacao {
+  width: 100%;
+  height: 500px;
+  background-color: #ccc;
+}
+.box-contato {
+  border: 2px solid red;
+  height: 330px;
+}
 .title-box-empresa {
   background-color: red;
   color: #fff;
@@ -73,8 +82,7 @@ body {
 .formularioContato {
   margin-top: 8%;
 }
-.formularioContato input[type='text'],
-input[type='email'] {
+.formularioContato {
   width: 100%;
   height: 50px;
   border-radius: 5px;
@@ -85,17 +93,9 @@ input[type='email'] {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-.formularioContato input[type='submit'] {
-  width: 20%;
-  height: 50px;
-  background-color: rgb(89, 174, 52);
-  border-radius: 5px;
-  margin: 1%;
-  border-bottom: 8px solid #16961a;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+.BotaoSubmit {
+  border: 4px solid rgb(0, 175, 102);
+  background-color: #000;
 }
 .formularioContato textarea {
   width: 100%;
@@ -247,28 +247,13 @@ input[type='email'] {
   height: 100%;
 }
 
-.card {
-  margin-top: 10%;
-  margin: 1%;
-  border: 6px solid rgb(230, 230, 230);
-  border-radius: 30px;
-  background: #ffffff;
-  box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
-
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
+.servicos {
+  background: #fff;
 }
-.card-text {
+.servicos-text {
   padding-top: 5%;
-  background-color: '#fff';
+  background-color: '#273036';
   /* background-color: rgba(227, 225, 225, 0.776); */
-  height: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 .card-servicos {
   margin: 1%;
@@ -290,7 +275,27 @@ input[type='email'] {
   -ms-transition: 1s;
   -o-transition: 1s;
 }
+.Image-servico {
+  background-color: #f2f2f2;
+  background-image: url('../public/tanque.jpg');
+  background-size: cover;
 
+  background-repeat: no-repeat;
+}
+.Image-servico1 {
+  background-color: #f2f2f2;
+  background-image: url('../public/colhedora.jpg');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
+.Image-servico2 {
+  background-color: #f2f2f2;
+  background-image: url('../public/trela.png');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
 .card-servicos:hover {
   border-radius: 8px;
   /*animation: menu 1s forwards;

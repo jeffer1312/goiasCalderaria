@@ -139,7 +139,12 @@ export default function Home() {
         </Flex>
       </Flex>
 
-      <Flex className='initialContent' gridArea='initialContent' height='450px'>
+      <Flex
+        className='initialContent'
+        marginTop='5%'
+        gridArea='initialContent'
+        height='450px'
+      >
         <Flex className='container'>
           {/* Card Servico */}
           <Flex
@@ -173,7 +178,7 @@ export default function Home() {
                 </Text>
               </Flex>
 
-              <Flex overflow='hidden' padding='5%' justifyContent='center'>
+              <Flex overflow='hidden' padding='8%' justifyContent='center'>
                 <Text>
                   A manutenção industrial consiste num conjunto de práticas que
                   busca fiscalizar e manter instrumentos e máquinas em pleno
@@ -318,7 +323,7 @@ export default function Home() {
         </Flex>
       </Flex>
 
-      <Flex flexDirection='column' gridArea='servicos'>
+      <Flex flexDirection='column' paddingBottom='8%' gridArea='servicos'>
         <Flex justifyContent='center'>
           <Heading marginTop='60px' fontSize='6xl' color='rgb(130,130,130)'>
             Produtos e Serviços
@@ -327,68 +332,96 @@ export default function Home() {
         <Flex justifyContent='center'>
           <div className='separator'></div>
         </Flex>
-        <Flex flexWrap='wrap' className='container'>
-          <Flex className='card' width='30%' flexDirection='column'>
-            <Image src='/teste1.jpg' alt='teset' width={200} height={200} />
+        <Flex>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1300 220'>
+            <path
+              fill='#fff'
+              fill-opacity='1'
+              d='M0,0L40,5.3C80,11,160,21,240,53.3C320,85,400,139,480,154.7C560,171,640,149,720,138.7C800,128,880,128,960,122.7C1040,117,1120,107,1200,133.3C1280,160,1360,224,1400,256L1440,288L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z'
+            ></path>
+          </svg>
+        </Flex>
+        {/* produtos e servicos imagens */}
+        <Flex className='servicos' height='650px' width='100%'>
+          <Flex width='50%' className='Image-servico'></Flex>
 
-            <Flex
-              flexDirection='column'
-              justifyContent='center'
-              className='card-text'
-            >
-              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
-                Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
-                Tubulações
-              </Heading>
-              <Text textAlign='start' padding='10%'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Exercitationem, illum. Tempora expedita maiores animi ratione
-                odit ullam alias, nesciunt nostrum sint cupiditate repellendus
-                ducimus voluptatum quisquam, rerum iusto dolorum totam.
-              </Text>
-            </Flex>
-          </Flex>
-          <Flex className='card' width='30%' flexDirection='column'>
-            <Image src='/teste2.jpg' alt='' width={200} height={200} />
-
-            <Flex
-              flexDirection='column'
-              justifyContent='center'
-              className='card-text'
-            >
-              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
-                Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
-                Tubulações
-              </Heading>
-              <Text textAlign='start' padding='10%'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Exercitationem, illum. Tempora expedita maiores animi ratione
-                odit ullam alias, nesciunt nostrum sint cupiditate repellendus
-                ducimus voluptatum quisquam, rerum iusto dolorum totam.
-              </Text>
-            </Flex>
-          </Flex>
-          <Flex className='card' width='30%' flexDirection='column'>
-            <Image src='/teste2.jpg' alt='' width={200} height={200} />
-
-            <Flex
-              flexDirection='column'
-              justifyContent='center'
-              className='card-text'
-            >
-              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
-                Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
-                Tubulações
-              </Heading>
-              <Text textAlign='start' padding='10%'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Exercitationem, illum. Tempora expedita maiores animi ratione
-                odit ullam alias, nesciunt nostrum sint cupiditate repellendus
-                ducimus voluptatum quisquam, rerum iusto dolorum totam.
-              </Text>
-            </Flex>
+          <Flex
+            width='50%'
+            flexDirection='column'
+            justifyContent='center'
+            className='servicos-text'
+          >
+            <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
+              Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
+              Tubulações
+            </Heading>
+            <Text textAlign='start' padding='10%'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Exercitationem, illum. Tempora expedita maiores animi ratione odit
+              ullam alias, nesciunt nostrum sint cupiditate repellendus ducimus
+              voluptatum quisquam, rerum iusto dolorum totam.
+            </Text>
           </Flex>
         </Flex>
+        {/* Fim produtos e servicos imagens */}
+
+        {/* produtos e servicos imagens */}
+        <Flex
+          className='servicos'
+          backgroundColor='#fff'
+          height='650px'
+          width='100%'
+        >
+          <Flex
+            width='50%'
+            flexDirection='column'
+            justifyContent='center'
+            className='servicos-text'
+          >
+            <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
+              Manutenção de Maquinário Agrícola
+            </Heading>
+            <Text textAlign='start' padding='10%'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Exercitationem, illum. Tempora expedita maiores animi ratione odit
+              ullam alias, nesciunt nostrum sint cupiditate repellendus ducimus
+              voluptatum quisquam, rerum iusto dolorum totam.
+            </Text>
+          </Flex>
+          <Flex width='50%' className='Image-servico1'></Flex>
+        </Flex>
+        {/* Fim produtos e servicos imagens */}
+
+        {/* produtos e servicos imagens */}
+        <Flex className='servicos' height='650px' width='100%'>
+          <Flex width='50%' className='Image-servico2'></Flex>
+
+          <Flex
+            width='50%'
+            flexDirection='column'
+            justifyContent='center'
+            className='servicos-text'
+          >
+            <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
+              Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
+              Tubulações
+            </Heading>
+            <Text textAlign='start' padding='10%'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Exercitationem, illum. Tempora expedita maiores animi ratione odit
+              ullam alias, nesciunt nostrum sint cupiditate repellendus ducimus
+              voluptatum quisquam, rerum iusto dolorum totam.
+            </Text>
+          </Flex>
+        </Flex>
+        {/* Fim produtos e servicos imagens */}
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1300 220'>
+          <path
+            fill='#fff'
+            fill-opacity='1'
+            d='M0,0L40,5.3C80,11,160,21,240,53.3C320,85,400,139,480,154.7C560,171,640,149,720,138.7C800,128,880,128,960,122.7C1040,117,1120,107,1200,133.3C1280,160,1360,224,1400,256L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z'
+          ></path>
+        </svg>
       </Flex>
     </>
   );
