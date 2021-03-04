@@ -1,8 +1,17 @@
 import ThemeContainer from '../contexts/theme/ThemeContainer';
-import { Flex, Grid, Heading, List, ListItem, Text } from '@chakra-ui/core';
+import {
+  Flex,
+  Grid,
+  Heading,
+  List,
+  ListItem,
+  Text,
+  Image,
+} from '@chakra-ui/core';
 import './styles.css';
 import 'animate.css';
 import Link from 'next/link';
+import { FaBars } from 'react-icons/fa';
 
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
@@ -14,8 +23,8 @@ function MyApp({ Component, pageProps }) {
         <Grid
           as='main'
           height='100%'
-          templateColumns='1fr 720px 720px 1fr'
-          templateRows='180px 56px   auto auto 1fr auto'
+          templateColumns='1fr 1fr 1fr 1fr'
+          templateRows='auto auto auto auto auto auto'
           templateAreas="
           'header header header header'
       'menu menu menu menu'     
@@ -28,25 +37,43 @@ function MyApp({ Component, pageProps }) {
           justifyContent='center'
           alignItems='start'
         >
-          <Flex className='background-logo'>
-            <Flex className='layer-menu'>
-              <Flex width='100%' alignContent='center' justifyContent='center'>
-                <Link href='/'> </Link>
-                <Flex className='logo'></Flex>
+          <Flex
+            width='100%'
+            justifyContent='center'
+            className='background-logo  '
+          >
+            <Flex
+              justifyContent={{
+                base: 'flex-start',
+                lg: 'center',
+                xl: 'center',
+              }}
+              width='100%'
+            >
+              <Flex flexDirection='column' justifyContent='center'>
+                <Image
+                  objectFit='cover'
+                  src='/logo.png'
+                  alt='Goias Caldeiraria'
+                  width={{
+                    base: '350px',
+                    md: '500px',
+                    lg: '600px',
+                    xl: '600px',
+                  }}
+                />
               </Flex>
-              {/* 
-              <Flex
-                color='#000'
-                width='40%'
-                alignItems='center'
-                justifyContent='flex-end'
-              >
-                <ul>
-                  <Text>Rua SB13, qd 42 lote 19, 75830-000</Text>
-                  <p>Mineiros - GO</p>
-                  <p>(64)99618-7103/(64)99342-7147</p>
-                </ul>
-              </Flex> */}
+            </Flex>
+            <Flex
+              flexDirection='column'
+              marginRight='2%'
+              justifyContent='center'
+            >
+              <FaBars
+                className='menu-mobile'
+                fontSize='2.5rem'
+                color='rgba(0, 0, 0, 0.6)'
+              />
             </Flex>
           </Flex>
           <Flex className='background-menu' width='100%'>
@@ -73,11 +100,12 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
 
           <Flex
+            width=''
             justifyContent='center'
             flexDirection='column'
             gridArea='footer'
-            className='footer'
             backgroundColor='#fff'
+            borderTop='1px solid #ccc'
             // backgroundColor='#129e38'
           >
             <Flex justifyContent='center' className='logoFooter'>

@@ -20,9 +20,9 @@ export default function Home() {
         justifyItems='center'
         className='background animate__animated animate__fadeIn'
         height={{
-          base: '150px',
-          md: '200px',
-          lg: '350px',
+          base: '400px',
+          md: '400px',
+          lg: '400px',
           xl: '561px',
         }}
       >
@@ -41,7 +41,7 @@ export default function Home() {
             <Heading
               color='white'
               fontSize={{
-                base: '1rem',
+                base: '1.4rem',
                 md: '1.8rem',
                 lg: '2rem',
                 xl: '3rem',
@@ -60,7 +60,7 @@ export default function Home() {
                       <Text
                         padding='8px 10px'
                         fontSize={{
-                          base: '.9rem',
+                          base: '1.4rem',
                           md: '1.5rem',
                           lg: '1.8rem',
                           xl: '2.2rem',
@@ -82,7 +82,7 @@ export default function Home() {
                       <Text
                         padding='8px 10px'
                         fontSize={{
-                          base: '.9rem',
+                          base: '1.4rem',
                           md: '1.5rem',
                           lg: '1.8rem',
                           xl: '2.2rem',
@@ -102,7 +102,7 @@ export default function Home() {
                       <Text
                         padding='8px 10px'
                         fontSize={{
-                          base: '.9rem',
+                          base: '1.4rem',
                           md: '1.5rem',
                           lg: '1.8rem',
                           xl: '2.2rem',
@@ -122,7 +122,7 @@ export default function Home() {
                       <Text
                         padding='8px 10px'
                         fontSize={{
-                          base: '.9rem',
+                          base: '1.2rem',
                           md: '1.5rem',
                           lg: '1.8rem',
                           xl: '2.2rem',
@@ -139,15 +139,26 @@ export default function Home() {
         </Flex>
       </Flex>
 
-      <Flex
-        className='initialContent'
-        marginTop='5%'
-        gridArea='initialContent'
-        height='450px'
-      >
-        <Flex className='container'>
+      <Flex marginTop='5%' width='100%' gridArea='initialContent'>
+        <Flex
+          width='100%'
+          flexWrap={{
+            base: 'wrap',
+            md: 'wrap',
+            lg: 'nowrap',
+            xl: 'nowrap',
+          }}
+          className='container'
+        >
           {/* Card Servico */}
           <Flex
+            width={{
+              base: '100%',
+              md: '48%',
+              lg: '25%',
+              xl: '25%',
+            }}
+            height='450px'
             justifyContent='center'
             className='card-servicos animate__animated animate__backInLeft'
           >
@@ -156,7 +167,7 @@ export default function Home() {
                 <Text
                   padding='10% 0'
                   fontSize={{
-                    base: '.9rem',
+                    base: '3rem',
                     md: '1rem',
                     lg: '1.2rem',
                     xl: '1.5rem',
@@ -168,7 +179,7 @@ export default function Home() {
               <Flex justifyContent='center'>
                 <Text
                   fontSize={{
-                    base: '1.5rem',
+                    base: '3rem',
                     md: '2rem',
                     lg: '2.5rem',
                     xl: '3rem',
@@ -195,6 +206,13 @@ export default function Home() {
 
           {/* Card Servico */}
           <Flex
+            width={{
+              base: '100%',
+              md: '48%',
+              lg: '25%',
+              xl: '25%',
+            }}
+            height='450px'
             justifyContent='center'
             className='card-servicos animate__animated animate__backInUp'
           >
@@ -203,7 +221,7 @@ export default function Home() {
                 <Text
                   padding='10% 0'
                   fontSize={{
-                    base: '.9rem',
+                    base: '3rem',
                     md: '1rem',
                     lg: '1.2rem',
                     xl: '1.5rem',
@@ -215,7 +233,7 @@ export default function Home() {
               <Flex justifyContent='center'>
                 <Text
                   fontSize={{
-                    base: '1.5rem',
+                    base: '3rem',
                     md: '2rem',
                     lg: '2.5rem',
                     xl: '3rem',
@@ -238,6 +256,13 @@ export default function Home() {
 
           {/* Card Servico */}
           <Flex
+            width={{
+              base: '100%',
+              md: '48%',
+              lg: '25%',
+              xl: '25%',
+            }}
+            height='450px'
             justifyContent='center'
             className='card-servicos animate__animated animate__backInUp'
           >
@@ -246,7 +271,7 @@ export default function Home() {
                 <Text
                   padding='10% 0'
                   fontSize={{
-                    base: '.9rem',
+                    base: '3rem',
                     md: '1rem',
                     lg: '1.2rem',
                     xl: '1.5rem',
@@ -258,7 +283,7 @@ export default function Home() {
               <Flex justifyContent='center'>
                 <Text
                   fontSize={{
-                    base: '1.5rem',
+                    base: '3rem',
                     md: '2rem',
                     lg: '2.5rem',
                     xl: '3rem',
@@ -280,6 +305,13 @@ export default function Home() {
           {/* Card Servico */}
           {/* Card Servico */}
           <Flex
+            width={{
+              base: '100%',
+              md: '48%',
+              lg: '25%',
+              xl: '25%',
+            }}
+            height='450px'
             justifyContent='center'
             className='card-servicos animate__animated animate__backInRight'
           >
@@ -288,7 +320,7 @@ export default function Home() {
                 <Text
                   padding='10% 0'
                   fontSize={{
-                    base: '.9rem',
+                    base: '3rem',
                     md: '1rem',
                     lg: '1.2rem',
                     xl: '1.5rem',
@@ -300,7 +332,7 @@ export default function Home() {
               <Flex justifyContent='center'>
                 <Text
                   fontSize={{
-                    base: '1.5rem',
+                    base: '3rem',
                     md: '2rem',
                     lg: '2.5rem',
                     xl: '3rem',

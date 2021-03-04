@@ -4,8 +4,8 @@
 .teste {
   border: 1px solid red;
 }
-.footer {
-  border-top: 1px solid #ccc;
+.menu-mobile {
+  display: none;
 }
 html,
 body {
@@ -170,9 +170,9 @@ body {
 .logo {
   width: 100%;
   height: 100%;
-  max-height: 200px;
-  max-width: 600px;
-  background-size: cover;
+
+  background-size: 100%;
+  background-repeat: no-repeat;
   background-image: url('/logo.png');
 }
 .infoFooter {
@@ -186,9 +186,7 @@ body {
   width: 400px;
   height: 150px;
 }
-.initialContent {
-  height: 100%;
-}
+
 .background {
   background-image: url('../public/1.jpg');
   width: 100%;
@@ -257,8 +255,7 @@ body {
 }
 .card-servicos {
   margin: 1%;
-  width: 25%;
-  height: 80%;
+
   font-size: 1rem;
   border-radius: 30px;
   background-color: #fff;
@@ -297,21 +294,17 @@ body {
   background-repeat: no-repeat;
 }
 .card-servicos:hover {
-  border-radius: 8px;
+  border-radius: 10px;
   /*animation: menu 1s forwards;
-  */
-
-  /*background-color: rgb(0, 0, 0);
+  */ /*background-color: rgb(0, 0, 0);
   */
   border: 1px dotted #1e91d6;
   width: 35%;
-  height: 100%;
   color: rgba(0, 0, 0, 1);
-
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   -webkit-border-radius: 8px;
 }
 
@@ -353,15 +346,11 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 500px) {
-  .logo {
-  }
-
+@media (max-width: 800px) {
   .menu {
     display: none;
   }
-
-  .teste {
-    width: 100%;
+  .menu-mobile {
+    display: block;
   }
 }
