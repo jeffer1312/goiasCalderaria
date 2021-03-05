@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/core';
 import './styles.css';
 import 'animate.css';
+import { useState } from 'react';
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
 
@@ -17,6 +18,9 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 function MyApp({ Component, pageProps }) {
+  const [sidebar, setSidebar] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
+
   return (
     <ThemeContainer>
       <Flex flexDirection='column' className='backgroundColor'>
@@ -70,6 +74,7 @@ function MyApp({ Component, pageProps }) {
               justifyContent='center'
             >
               <FaBars
+                onClick={showSidebar}
                 className='menu-mobile'
                 fontSize='2.5rem'
                 color='rgba(0, 0, 0, 0.6)'
@@ -78,22 +83,61 @@ function MyApp({ Component, pageProps }) {
           </Flex>
           <Flex className='background-menu' width='100%'>
             <Flex width='100%' alignItems='center' justifyContent='center'>
-              <ul className='menu'>
-                <Flex>
-                  <li>
-                    <Link href='/'>Home</Link>
-                  </li>
-                  <li>
-                    <Link href='/empresa'>A Empresa</Link>
-                  </li>
-                  <li>
-                    <Link href='/servicos'>Serviços</Link>
-                  </li>
-                  <li>
-                    <Link href='/contato'>Contato</Link>
-                  </li>
-                </Flex>
-              </ul>
+              <nav>
+                <ul className='menu'>
+                  <Flex>
+                    <li>
+                      <Link href='/'>Home</Link>
+                    </li>
+                    <li>
+                      <Link href='/empresa'>A Empresa</Link>
+                    </li>
+                    <li>
+                      <Link href='/servicos'>Serviços</Link>
+                    </li>
+                    <li>
+                      <Link href='/contato'>Contato</Link>
+                    </li>
+                  </Flex>
+                </ul>
+              </nav>
+            </Flex>
+          </Flex>
+          <Flex
+            className={sidebar ? 'mobile-background' : 'inativo'}
+            width='100%'
+          >
+            <Flex width='100%' alignItems='center' justifyContent='center'>
+              <nav>
+                <ul
+                  className={
+                    sidebar
+                      ? 'mobile animate__animated animate__fadeIn'
+                      : 'inativo'
+                  }
+                >
+                  <Flex flexDirection='column' textAlign='center'>
+                    <li onClick={showSidebar}>
+                      <Link href='/'>Home</Link>
+                    </li>
+                    <li onClick={showSidebar}>
+                      <Link href='/empresa' onClick={showSidebar}>
+                        A Empresa
+                      </Link>
+                    </li>
+                    <li onClick={showSidebar}>
+                      <Link href='/servicos' onClick={showSidebar}>
+                        Serviços
+                      </Link>
+                    </li>
+                    <li onClick={showSidebar}>
+                      <Link href='/contato' onClick={showSidebar}>
+                        Contato
+                      </Link>
+                    </li>
+                  </Flex>
+                </ul>
+              </nav>
             </Flex>
           </Flex>
 

@@ -160,7 +160,7 @@ export default function Home() {
             }}
             height='450px'
             justifyContent='center'
-            className='card-servicos animate__animated animate__backInLeft'
+            className='card-servicos  animate__animated animate__backInLeft'
           >
             <Flex flexDirection='column'>
               <Flex justifyContent='center'>
@@ -373,15 +373,46 @@ export default function Home() {
             ></path>
           </svg>
         </Flex>
-        {/* produtos e servicos imagens */}
-        <Flex className='servicos' height='650px' width='100%'>
-          <Flex width='50%' className='Image-servico'></Flex>
+        {/* produtos e servicos imagens 1 */}
+        <Flex flexWrap='wrap' className='servicos ' height='650px' width='100%'>
+          <Flex></Flex>
+          <Flex
+            order={{
+              base: '2',
+              md: '1',
+              lg: '1',
+              xl: '1',
+            }}
+            width={{
+              base: '100%',
+              md: '50%',
+              lg: '50%',
+              xl: '50%',
+            }}
+            className='Image-servico '
+          ></Flex>
 
           <Flex
-            width='50%'
+            order={{
+              base: '1',
+              md: '2',
+              lg: '2',
+              xl: '2',
+            }}
+            width={{
+              base: '100%',
+              md: '50%',
+              lg: '50%',
+              xl: '50%',
+            }}
             flexDirection='column'
-            justifyContent='center'
-            className='servicos-text'
+            justifyContent={{
+              base: 'flex-end',
+              md: 'center',
+              lg: 'center',
+              xl: 'center',
+            }}
+            className='servicos-text '
           >
             <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
               Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
@@ -395,17 +426,29 @@ export default function Home() {
             </Text>
           </Flex>
         </Flex>
-        {/* Fim produtos e servicos imagens */}
+        {/* Fim produtos e servicos imagens 1*/}
 
-        {/* produtos e servicos imagens */}
+        {/* produtos e servicos imagens 2 */}
         <Flex
           className='servicos'
+          flexWrap='wrap'
           backgroundColor='#fff'
           height='650px'
           width='100%'
         >
           <Flex
-            width='50%'
+            order={{
+              base: '1',
+              md: '2',
+              lg: '2',
+              xl: '2',
+            }}
+            width={{
+              base: '100%',
+              md: '50%',
+              lg: '50%',
+              xl: '50%',
+            }}
             flexDirection='column'
             justifyContent='center'
             className='servicos-text'
@@ -420,16 +463,55 @@ export default function Home() {
               voluptatum quisquam, rerum iusto dolorum totam.
             </Text>
           </Flex>
-          <Flex width='50%' className='Image-servico1'></Flex>
+          <Flex
+            order={{
+              base: '2',
+              md: '2',
+              lg: '2',
+              xl: '2',
+            }}
+            width={{
+              base: '100%',
+              md: '50%',
+              lg: '50%',
+              xl: '50%',
+            }}
+            className='Image-servico1'
+          ></Flex>
         </Flex>
-        {/* Fim produtos e servicos imagens */}
+        {/* Fim produtos e servicos imagens 2 */}
 
-        {/* produtos e servicos imagens */}
-        <Flex className='servicos' height='650px' width='100%'>
-          <Flex width='50%' className='Image-servico2'></Flex>
+        {/* produtos e servicos imagens 3 */}
+        <Flex flexWrap='wrap' className='servicos' height='650px' width='100%'>
+          <Flex
+            order={{
+              base: '2',
+              md: '1',
+              lg: '1',
+              xl: '1',
+            }}
+            width={{
+              base: '100%',
+              md: '50%',
+              lg: '50%',
+              xl: '50%',
+            }}
+            className='Image-servico2'
+          ></Flex>
 
           <Flex
-            width='50%'
+            order={{
+              base: '1',
+              md: '2',
+              lg: '2',
+              xl: '2',
+            }}
+            width={{
+              base: '100%',
+              md: '50%',
+              lg: '50%',
+              xl: '50%',
+            }}
             flexDirection='column'
             justifyContent='center'
             className='servicos-text'
@@ -446,7 +528,7 @@ export default function Home() {
             </Text>
           </Flex>
         </Flex>
-        {/* Fim produtos e servicos imagens */}
+        {/* Fim produtos e servicos imagens 3 */}
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1300 220'>
           <path
             fill='#fff'
