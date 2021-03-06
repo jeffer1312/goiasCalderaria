@@ -19,22 +19,8 @@ class MyDocument extends Document {
           />
           <meta name='author' content='Jefferson Felizardo' />
 
-          <meta charSet='UTF-8' />
-
           <link
             href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap'
-            rel='stylesheet'
-          />
-          <link
-            href="'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap'"
-            rel='stylesheet'
-          />
-          <link
-            href='https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap'
-            rel='stylesheet'
-          />
-          <link
-            href="'https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap'"
             rel='stylesheet'
           />
         </Head>
