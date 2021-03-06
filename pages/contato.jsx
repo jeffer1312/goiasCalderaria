@@ -98,7 +98,7 @@ export default function contato() {
                       <FormControl
                         isInvalid={form.errors.name && form.touched.name}
                       >
-                        <FormLabel htmlFor='name'>Email</FormLabel>
+                        <FormLabel htmlFor='name'>Nome</FormLabel>
                         <Input
                           width={{
                             base: '94vw',
