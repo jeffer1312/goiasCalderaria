@@ -1,6 +1,7 @@
 const mailer = require('nodemailer');
-const user = 'gosorteios@gosorteios10.com.br';
-const pass = 'Jf1312911415!';
+const user = process.env.users;
+const pass = process.env.pass;
+
 module.exports = (email, nome, mensagem) => {
   const smtpTransport = mailer.createTransport({
     host: 'smtp.umbler.com',
