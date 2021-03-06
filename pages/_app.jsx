@@ -13,7 +13,7 @@ import 'animate.css';
 import { useState } from 'react';
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
-
+import Head from 'next/head';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
@@ -24,6 +24,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeContainer>
       <Flex flexDirection='column' className='backgroundColor'>
+        <Head>
+          <title>Goias Caldeiraria</title>
+          <meta property='og:title' content='Goias Caldeiraria' key='title' />
+        </Head>
         <Grid
           as='main'
           height='100%'
@@ -104,7 +108,7 @@ function MyApp({ Component, pageProps }) {
             </Flex>
           </Flex>
           <Flex
-            className={sidebar ? 'mobile-background' : 'inativo'}
+            className={sidebar ? 'mobile-background active' : 'inativo'}
             width='100%'
           >
             <Flex width='100%' alignItems='center' justifyContent='center'>

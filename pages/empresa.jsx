@@ -1,8 +1,8 @@
-import { Flex, Heading, Text } from '@chakra-ui/core';
+import { Flex, Heading, Text, Image } from '@chakra-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper';
 import { FaBriefcase, FaCheck } from 'react-icons/fa';
-import Image from 'next/image';
+
 SwiperCore.use([Pagination]);
 
 export default function empresa() {
@@ -14,9 +14,22 @@ export default function empresa() {
         flexDirection='column'
       >
         <Text
-          textAlign='center'
+          color='rgba(0, 0, 0, 0.7)'
+          fontFamily='Akaya Telivigala, cursive'
+          marginLeft={{
+            base: '8%',
+            md: '0',
+            lg: '0',
+            xl: '0',
+          }}
+          textAlign={{
+            base: 'left',
+            md: 'center',
+            lg: 'center',
+            xl: 'center',
+          }}
           fontSize={{
-            base: '1.5rem',
+            base: '2.5rem',
             md: '2rem',
             lg: '2.5rem',
             xl: '3rem',
@@ -27,24 +40,45 @@ export default function empresa() {
         <Flex justifyContent='center'>
           <Heading
             textAlign='center'
-            marginTop='60px'
+            marginTop={{
+              base: '20px',
+              md: '60px',
+              lg: '60px',
+              xl: '60px',
+            }}
             fontSize='4xl'
             color='rgb(130,130,130)'
           >
-            <span className='redText'>Qualidade</span> e{' '}
-            <span className='redText'>conhecimento</span> técnico <br />
-            como padrão de <span className='redText'>trabalho</span>.
+            <span className='blueText'>Qualidade</span> e{' '}
+            <span className='blueText'>conhecimento</span> técnico <br />
+            como padrão de <span className='blueText'>trabalho</span>.
           </Heading>
         </Flex>
         <Flex marginTop='2%' justifyContent='center'>
           <div className='separator'></div>
         </Flex>
 
-        <Flex>
-          <Flex flexDirection='column' width='70%' padding='10%'>
+        <Flex flexWrap='wrap' width='100%'>
+          <Flex
+            flexDirection='column'
+            width={{
+              base: '100%',
+              md: '100%',
+              lg: '70%',
+              xl: '70%',
+            }}
+            padding={{
+              base: '0%',
+              md: '5%',
+              lg: '5%',
+              xl: '7%',
+            }}
+          >
             <Text
+              color='rgba(0, 0, 0, 0.7)'
+              fontFamily='Akaya Telivigala, cursive'
               fontSize={{
-                base: '1.5rem',
+                base: '2.5rem',
                 md: '2rem',
                 lg: '2.5rem',
                 xl: '3rem',
@@ -55,27 +89,35 @@ export default function empresa() {
             <Flex marginTop='2%'>
               <div className='separator'></div>
             </Flex>
-            <Flex>
-              <Flex className='card-service-image' width='100%'>
-                <Swiper
-                  slidesPerView={1}
-                  autoplay
-                  pagination={{ clickable: true }}
-                >
-                  <SwiperSlide>
-                    <Image
-                      className='imagemEmpresa'
-                      src='/empresa.jpeg'
-                      alt=''
-                      objectFit='cover'
-                      width={1152}
-                      height={504}
-                    />
-                  </SwiperSlide>
-                </Swiper>
-              </Flex>
+
+            <Flex width='100%'>
+              <Image
+                objectFit='cover'
+                src='/empresa.jpeg'
+                alt='Goias Caldeiraria'
+                width={{
+                  base: '1152px',
+                  md: '1152px',
+                  lg: '1152px',
+                  xl: '1152px',
+                }}
+                height={{
+                  base: '300px',
+                  md: '500px',
+                  lg: '500px',
+                  xl: '500px',
+                }}
+              />
             </Flex>
-            <Text>
+
+            <Text
+              fontSize={{
+                base: '1.2rem',
+                md: '1.3rem',
+                lg: '1.2rem',
+                xl: '1.4rem',
+              }}
+            >
               A Goiás caldeiraria montagem, manutenção industrial e agrícola,
               foi criada visando atender as demandas das empresas que necessitam
               de manutenção e montagem de equipamentos com processo de Soldagens
@@ -88,7 +130,7 @@ export default function empresa() {
               preços e condições especiais em nossos clientes.
             </Text>
             <Text
-              className='redText'
+              className='blueText'
               fontSize={{
                 base: '1.5rem',
                 md: '1.8rem',
@@ -98,7 +140,14 @@ export default function empresa() {
             >
               Visão
             </Text>
-            <Text>
+            <Text
+              fontSize={{
+                base: '1.2rem',
+                md: '1.3rem',
+                lg: '1.2rem',
+                xl: '1.4rem',
+              }}
+            >
               Ser referência na produção de equipamentos mecânicos, caldeirados
               e de sistemas pela excelência em nossos serviços, destacadamente
               para os setores de geração de energia,alimenticio, produção de
@@ -106,7 +155,7 @@ export default function empresa() {
               indústrias dos setores químicos e petroquímicos.
             </Text>
             <Text
-              className='redText'
+              className='blueText'
               fontSize={{
                 base: '1.5rem',
                 md: '1.8rem',
@@ -116,7 +165,14 @@ export default function empresa() {
             >
               Missão
             </Text>
-            <Text>
+            <Text
+              fontSize={{
+                base: '1.2rem',
+                md: '1.3rem',
+                lg: '1.2rem',
+                xl: '1.2rem',
+              }}
+            >
               Produzir equipamentos e sistemas com tecnologia e qualidade, de
               acordo com as necessidades dos clientes com foco na segurança,
               qualidade e meio ambiente, visando assegurar a permanência e a
@@ -124,7 +180,7 @@ export default function empresa() {
               atividades.
             </Text>
             <Text
-              className='redText'
+              className='blueText'
               fontSize={{
                 base: '1.5rem',
                 md: '1.8rem',
@@ -134,13 +190,20 @@ export default function empresa() {
             >
               Valores
             </Text>
-            <Text>
+            <Text
+              fontSize={{
+                base: '1.2rem',
+                md: '1.3rem',
+                lg: '1.2rem',
+                xl: '1.2rem',
+              }}
+            >
               Representam a base do desenvolvimento dos nossos negócios: Ética,
               Comprometimento, Qualidade, Melhoria Contínua e Responsabilidade
               Socio- ambiental, visando sempre a Excelência.
             </Text>
             <Text
-              className='redText'
+              className='blueText'
               fontSize={{
                 base: '1.5rem',
                 md: '1.8rem',
@@ -150,7 +213,14 @@ export default function empresa() {
             >
               Política de qualidade
             </Text>
-            <Text>
+            <Text
+              fontSize={{
+                base: '1.2rem',
+                md: '1.3rem',
+                lg: '1.2rem',
+                xl: '1.2rem',
+              }}
+            >
               Atender às necessidades, exigências e expectativas de nossos
               clientes de forma flexível de acordo com os requisitos
               estabelecidos, respeitando suas tradições e culturas. Melhorar
@@ -161,7 +231,16 @@ export default function empresa() {
               órgãos governamentais e colaboradores.
             </Text>
           </Flex>
-          <Flex flexDirection='column' width='30%' paddingTop='10%'>
+          <Flex
+            flexDirection='column'
+            width={{
+              base: '100%',
+              md: '100%',
+              lg: '30%',
+              xl: '30%',
+            }}
+            paddingTop='10%'
+          >
             {/* Box  */}
             <Flex justifyContent='center'>
               <Flex width='100%' className='box-empresa'>
@@ -171,8 +250,8 @@ export default function empresa() {
                       <Text
                         padding='8px'
                         fontSize={{
-                          base: '0.8rem',
-                          md: '1rem',
+                          base: '1.8rem',
+                          base: '1.8rem',
                           lg: '1.2rem',
                           xl: '1.5rem',
                         }}
@@ -184,8 +263,8 @@ export default function empresa() {
                       <Text
                         padding='8px'
                         fontSize={{
-                          base: '0.8rem',
-                          md: '1rem',
+                          base: '1.8rem',
+                          base: '1.8rem',
                           lg: '1.2rem',
                           xl: '1.5rem',
                         }}
@@ -197,8 +276,8 @@ export default function empresa() {
                   {/* topicos box */}
                   <Flex
                     fontSize={{
-                      base: '0.5rem',
-                      md: '.6rem',
+                      base: '1.2rem',
+                      base: '1.8rem',
                       lg: '.8rem',
                       xl: '.8rem',
                     }}
@@ -224,8 +303,8 @@ export default function empresa() {
                   {/* topicos box */}
                   <Flex
                     fontSize={{
-                      base: '0.5rem',
-                      md: '.6rem',
+                      base: '1.2rem',
+                      base: '1.8rem',
                       lg: '.8rem',
                       xl: '.8rem',
                     }}
@@ -251,8 +330,8 @@ export default function empresa() {
                   {/* topicos box */}
                   <Flex
                     fontSize={{
-                      base: '0.5rem',
-                      md: '.6rem',
+                      base: '1.2rem',
+                      base: '1.8rem',
                       lg: '.8rem',
                       xl: '.8rem',
                     }}
@@ -278,8 +357,8 @@ export default function empresa() {
                   {/* topicos box */}
                   <Flex
                     fontSize={{
-                      base: '0.5rem',
-                      md: '.6rem',
+                      base: '1.2rem',
+                      base: '1.8rem',
                       lg: '.8rem',
                       xl: '.8rem',
                     }}
@@ -305,8 +384,8 @@ export default function empresa() {
                   {/* topicos box */}
                   <Flex
                     fontSize={{
-                      base: '0.5rem',
-                      md: '.6rem',
+                      base: '1.2rem',
+                      base: '1.8rem',
                       lg: '.8rem',
                       xl: '.8rem',
                     }}
@@ -332,8 +411,8 @@ export default function empresa() {
                   {/* topicos box */}
                   <Flex
                     fontSize={{
-                      base: '0.5rem',
-                      md: '.6rem',
+                      base: '1.2rem',
+                      base: '1.8rem',
                       lg: '.8rem',
                       xl: '.8rem',
                     }}
@@ -359,8 +438,8 @@ export default function empresa() {
                   {/* topicos box */}
                   <Flex
                     fontSize={{
-                      base: '0.5rem',
-                      md: '.6rem',
+                      base: '1.2rem',
+                      base: '1.8rem',
                       lg: '.8rem',
                       xl: '.8rem',
                     }}
@@ -386,8 +465,8 @@ export default function empresa() {
                   {/* topicos box */}
                   <Flex
                     fontSize={{
-                      base: '0.5rem',
-                      md: '.6rem',
+                      base: '1.2rem',
+                      base: '1.8rem',
                       lg: '.8rem',
                       xl: '.8rem',
                     }}
@@ -413,8 +492,8 @@ export default function empresa() {
                   {/* topicos box */}
                   <Flex
                     fontSize={{
-                      base: '0.5rem',
-                      md: '.6rem',
+                      base: '1.2rem',
+                      base: '1.8rem',
                       lg: '.8rem',
                       xl: '.8rem',
                     }}
@@ -440,8 +519,8 @@ export default function empresa() {
                   {/* topicos box */}
                   <Flex
                     fontSize={{
-                      base: '0.5rem',
-                      md: '.6rem',
+                      base: '1.2rem',
+                      base: '1.8rem',
                       lg: '.8rem',
                       xl: '.8rem',
                     }}

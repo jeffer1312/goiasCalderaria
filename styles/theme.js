@@ -3,14 +3,14 @@ import { theme, DefaultTheme } from '@chakra-ui/core';
 const customTheme = {
   ...theme,
   fonts: {
-    body: 'Source Sans Pro, sans-serif',
-    heading: 'Source Sans Pro, sans-serif;',
-    mono: 'Source Sans Pro, sans-serif',
+    body: 'Mulish sans-serif',
+    heading: 'Mulish sans-serif',
+    mono: 'Mulish sans-serif',
   },
   fontWeights: {
     ...theme.fontWeights,
     normal: 400,
-    medium: 600,
+    ligth: 400,
     bold: 700,
   },
   radii: {

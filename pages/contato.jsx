@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Flex,
   List,
@@ -19,37 +20,52 @@ import { Map, GoogleApiWrapper } from 'google-maps-react';
 import Image from 'next/image';
 import MapContainer from './map';
 import { FaBriefcase, FaCheck, FaMailBulk } from 'react-icons/fa';
-
+import axios from 'axios';
 export default function contato() {
-  function validateEmail(value) {
-    let error;
-    if (!value) {
-      error = 'Name is required';
-    } else if (value.toLowerCase() !== 'naruto') {
-      error = "Jeez! You're not a fan 😱";
+  const initialFieldValues = {
+    name: '',
+    email: '',
+    mensagem: '',
+  };
+
+  const [values, setValues] = useState(initialFieldValues);
+  const validate = () => {
+    const errors = {};
+    if (!values.email) {
+      errors.email = 'Required';
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+      errors.email = 'Invalid email address';
     }
-    return error;
-  }
+    return errors;
+  };
+  const handleFormSubmit = e => {
+    e.preventDefault();
+    axios.post('./api/email', {
+      values,
+      // email: values.email,
+      // nome: values.name,
+      // mensagem: values.mensagem,
+    });
+  };
+  const handleChange = e => {
+    let { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
   return (
     <Flex gridArea='content' className='container' flexDirection='column'>
-      <Flex>
-        {/* <Flex width='80%'>
-        <form>
-          <FormControl id='Nome'>
-            <FormLabel>Nome</FormLabel>
-            <Input type='nome' />
-          </FormControl>
-          <FormControl id='email'>
-            <FormLabel>Email address</FormLabel>
-            <Input type='email' />
-          </FormControl>
-          <FormControl id='mensagem'>
-            <FormLabel>Mensagem</FormLabel>
-            <Textarea type='mensagem' />
-          </FormControl>
-        </form>
-      </Flex> */}
-        <Flex width='80%' flexDirection='column'>
+      <Flex flexWrap='wrap' justifyContent='space-between'>
+        <Flex
+          width={{
+            base: '100%',
+            md: '100%',
+            lg: '60%',
+            xl: '60%',
+          }}
+          flexDirection='column'
+        >
           <Flex width='100%' flexDirection='column'>
             <Heading
               textAlign='left'
@@ -60,50 +76,65 @@ export default function contato() {
               Entre em contato conosco
             </Heading>
 
-            <Text>
+            <Text
+              fontSize={{
+                base: '1.2rem',
+                md: '1.3rem',
+                lg: '1.3rem',
+                xl: '1.5rem',
+              }}
+            >
               A Goias Caldeiraria está localizada na cidade de Mineiros – GO,
               entre em contato e retornaremos o mais breve possível.
             </Text>
           </Flex>
 
           <Flex>
-            <Formik
-              onSubmit={(values, actions) => {
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  actions.setSubmitting(false);
-                }, 1000);
-              }}
-            >
+            <Formik initialValues={{}}>
               {props => (
-                <Form>
+                <Form onSubmit={handleFormSubmit}>
                   <Field name='name'>
                     {({ field, form }) => (
                       <FormControl
                         isInvalid={form.errors.name && form.touched.name}
                       >
-                        <FormLabel htmlFor='name'>Nome</FormLabel>
+                        <FormLabel htmlFor='name'>Email</FormLabel>
                         <Input
-                          width='600px'
+                          width={{
+                            base: '94vw',
+                            md: '94vw',
+                            lg: '550px',
+                            xl: '600px',
+                          }}
                           {...field}
                           id='name'
+                          onChange={handleChange}
                           placeholder='nome'
+                          value={values.name}
                         />
                         <FormErrorMessage>{form.errors.name}</FormErrorMessage>
                       </FormControl>
                     )}
                   </Field>
-                  <Field name='email' validate={validateEmail}>
+
+                  <Field name='email' validate={validate}>
                     {({ field, form }) => (
                       <FormControl
                         isInvalid={form.errors.name && form.touched.name}
                       >
                         <FormLabel htmlFor='email'>Email</FormLabel>
                         <Input
-                          width='600px'
+                          width={{
+                            base: '94vw',
+                            md: '94vw',
+                            lg: '550px',
+                            xl: '600px',
+                          }}
                           {...field}
-                          id='name'
+                          id='email'
+                          onChange={handleChange}
                           placeholder='email'
+                          value={values.email}
                         />
                         <FormErrorMessage>{form.errors.name}</FormErrorMessage>
                       </FormControl>
@@ -116,10 +147,17 @@ export default function contato() {
                       >
                         <FormLabel htmlFor='mensagem'>Mensagem</FormLabel>
                         <Textarea
-                          width='600px'
+                          width={{
+                            base: '94vw',
+                            md: '94vw',
+                            lg: '550px',
+                            xl: '600px',
+                          }}
                           {...field}
-                          id='name'
-                          placeholder='email'
+                          id='mensagem'
+                          onChange={handleChange}
+                          placeholder='mensagem'
+                          value={values.mensagem}
                         />
                         <FormErrorMessage>{form.errors.name}</FormErrorMessage>
                       </FormControl>
@@ -139,7 +177,16 @@ export default function contato() {
           </Flex>
         </Flex>
         {/* Box  */}
-        <Flex width='40%' paddingTop='4%' justifyContent='center'>
+        <Flex
+          width={{
+            base: '100%',
+            md: '100%',
+            lg: '40%',
+            xl: '40%',
+          }}
+          paddingTop='4%'
+          justifyContent='center'
+        >
           <Flex width='100%' className='box-contato'>
             <Flex width='100%' flexDirection='column'>
               <Flex justifyContent='center' className='title-box-empresa'>
@@ -147,10 +194,10 @@ export default function contato() {
                   <Text
                     padding='8px'
                     fontSize={{
-                      base: '0.8rem',
-                      md: '1rem',
-                      lg: '1.2rem',
-                      xl: '1.5rem',
+                      base: '1.5rem',
+                      md: '1.2rem',
+                      lg: '1.8rem',
+                      xl: '1.8rem',
                     }}
                   >
                     <FaMailBulk />
@@ -160,10 +207,10 @@ export default function contato() {
                   <Text
                     padding='8px'
                     fontSize={{
-                      base: '0.8rem',
-                      md: '1rem',
-                      lg: '1.2rem',
-                      xl: '1.5rem',
+                      base: '1.5rem',
+                      md: '1.2rem',
+                      lg: '1.8rem',
+                      xl: '1.8rem',
                     }}
                   >
                     Informações adicionais
@@ -174,9 +221,9 @@ export default function contato() {
               <Flex
                 justifyContent='center'
                 fontSize={{
-                  base: '0.5rem',
-                  md: '.6rem',
-                  lg: '.8rem',
+                  base: '1.5rem',
+                  md: '1.2rem',
+                  lg: '1.8rem',
                   xl: '1.8rem',
                 }}
                 borderBottom='2px solid #ccc'
@@ -190,10 +237,10 @@ export default function contato() {
                 fontWeight='bold'
                 padding='1%'
                 fontSize={{
-                  base: '0.5rem',
-                  md: '.6rem',
-                  lg: '.8rem',
-                  xl: '1.2rem',
+                  base: '1.5rem',
+                  md: '1.2rem',
+                  lg: '1.8rem',
+                  xl: '1.8rem',
                 }}
               >
                 <Text> Goias Caldeiraria </Text>
@@ -205,9 +252,9 @@ export default function contato() {
               <Flex
                 paddingLeft='1%'
                 fontSize={{
-                  base: '0.5rem',
-                  md: '.6rem',
-                  lg: '.8rem',
+                  base: '1.2rem',
+                  md: '1.2rem',
+                  lg: '1rem',
                   xl: '1rem',
                 }}
               >
@@ -218,9 +265,9 @@ export default function contato() {
               <Flex
                 paddingLeft='1%'
                 fontSize={{
-                  base: '0.5rem',
-                  md: '.6rem',
-                  lg: '.8rem',
+                  base: '1.2rem',
+                  md: '1.2rem',
+                  lg: '1rem',
                   xl: '1rem',
                 }}
               >
@@ -231,9 +278,9 @@ export default function contato() {
               <Flex
                 paddingLeft='1%'
                 fontSize={{
-                  base: '0.5rem',
-                  md: '.6rem',
-                  lg: '.8rem',
+                  base: '1.2rem',
+                  md: '1.2rem',
+                  lg: '1rem',
                   xl: '1rem',
                 }}
               >
@@ -244,9 +291,9 @@ export default function contato() {
               <Flex
                 paddingLeft='1%'
                 fontSize={{
-                  base: '0.5rem',
-                  md: '.6rem',
-                  lg: '.8rem',
+                  base: '1.2rem',
+                  md: '1.2rem',
+                  lg: '1rem',
                   xl: '1rem',
                 }}
               >
@@ -257,9 +304,9 @@ export default function contato() {
               <Flex
                 paddingLeft='1%'
                 fontSize={{
-                  base: '0.5rem',
-                  md: '.6rem',
-                  lg: '.8rem',
+                  base: '1.2rem',
+                  md: '1.2rem',
+                  lg: '1rem',
                   xl: '1rem',
                 }}
               >
@@ -270,9 +317,9 @@ export default function contato() {
               <Flex
                 paddingLeft='1%'
                 fontSize={{
-                  base: '0.5rem',
-                  md: '.6rem',
-                  lg: '.8rem',
+                  base: '1.2rem',
+                  md: '1.2rem',
+                  lg: '1rem',
                   xl: '1rem',
                 }}
               >
@@ -283,9 +330,9 @@ export default function contato() {
               <Flex
                 paddingLeft='1%'
                 fontSize={{
-                  base: '0.5rem',
-                  md: '.6rem',
-                  lg: '.8rem',
+                  base: '1.2rem',
+                  md: '1.2rem',
+                  lg: '1rem',
                   xl: '1rem',
                 }}
               >
@@ -297,7 +344,17 @@ export default function contato() {
         </Flex>
         {/* Box  */}
       </Flex>
-      <Flex width='100%' className='mapa-localizacao'>
+      <Flex
+        margin='3% 0'
+        width='100%'
+        height={{
+          base: '400px',
+          md: '400px',
+          lg: '500px',
+          xl: '500px',
+        }}
+        className='mapa-localizacao'
+      >
         <Flex width='100%' flexDirection='column' justifyContent='center'>
           <Flex justifyContent='center'>
             <Text fontSize='3rem'>Mapa</Text>

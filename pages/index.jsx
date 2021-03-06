@@ -357,7 +357,12 @@ export default function Home() {
 
       <Flex flexDirection='column' paddingBottom='8%' gridArea='servicos'>
         <Flex justifyContent='center'>
-          <Heading marginTop='60px' fontSize='6xl' color='rgb(130,130,130)'>
+          <Heading
+            color='rgba(0, 0, 0, 0.7)'
+            fontFamily='Akaya Telivigala, cursive'
+            marginTop='60px'
+            fontSize='6xl'
+          >
             Produtos e Serviços
           </Heading>
         </Flex>
