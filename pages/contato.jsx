@@ -12,13 +12,11 @@ import {
   FormHelperText,
   Textarea,
   Button,
+  Image,
 } from '@chakra-ui/core';
+import Head from 'next/head';
 
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-
-import { Map, GoogleApiWrapper } from 'google-maps-react';
-import Image from 'next/image';
-import MapContainer from './map';
 import { FaBriefcase, FaCheck, FaMailBulk } from 'react-icons/fa';
 import axios from 'axios';
 export default function contato() {
@@ -56,6 +54,14 @@ export default function contato() {
   };
   return (
     <Flex gridArea='content' className='container' flexDirection='column'>
+      <Head>
+        <title> Contato - Goias Caldeiraria</title>
+        <meta
+          property='og:title'
+          content='Contato - Goias Caldeiraria'
+          key='title'
+        />
+      </Head>
       <Flex flexWrap='wrap' justifyContent='space-between'>
         <Flex
           width={{
@@ -187,7 +193,16 @@ export default function contato() {
           paddingTop='4%'
           justifyContent='center'
         >
-          <Flex width='100%' className='box-contato'>
+          <Flex
+            width='100%'
+            height={{
+              base: '450px',
+              md: '340px',
+              ld: '340px',
+              xl: '340px',
+            }}
+            className='box-contato'
+          >
             <Flex width='100%' flexDirection='column'>
               <Flex justifyContent='center' className='title-box-empresa'>
                 <Flex flexDirection='column' justifyContent='center'>
@@ -344,7 +359,18 @@ export default function contato() {
         </Flex>
         {/* Box  */}
       </Flex>
+      <Flex>
+        <Heading
+          textAlign='left'
+          marginTop='60px'
+          fontSize='4xl'
+          color='rgb(130,130,130)'
+        >
+          Como Chegar Ate nos
+        </Heading>
+      </Flex>
       <Flex
+        position='relative'
         margin='3% 0'
         width='100%'
         height={{
@@ -355,11 +381,18 @@ export default function contato() {
         }}
         className='mapa-localizacao'
       >
-        <Flex width='100%' flexDirection='column' justifyContent='center'>
+        <iframe
+          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10760.108916281437!2d-52.55551351775328!3d-17.542184797276754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDMyJzI1LjMiUyA1MsKwMzMnMDEuOCJX!5e0!3m2!1spt-BR!2sbr!4v1615124945841!5m2!1spt-BR!2sbr'
+          width='100%'
+          height='100%'
+          loading='lazy'
+        ></iframe>
+
+        {/* <Flex width='100%' flexDirection='column' justifyContent='center'>
           <Flex justifyContent='center'>
             <Text fontSize='3rem'>Mapa</Text>
           </Flex>
-        </Flex>
+        </Flex> */}
       </Flex>
     </Flex>
   );

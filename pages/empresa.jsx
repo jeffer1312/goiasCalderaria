@@ -2,12 +2,22 @@ import { Flex, Heading, Text, Image } from '@chakra-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper';
 import { FaBriefcase, FaCheck } from 'react-icons/fa';
+import { BoxEmpresa } from '../arquivosDb/empresa';
+import Head from 'next/head';
 
 SwiperCore.use([Pagination]);
 
 export default function empresa() {
   return (
     <Flex justifyContent='center' gridArea='content'>
+      <Head>
+        <title>A empresa - Goias Caldeiraria</title>
+        <meta
+          property='og:title'
+          content='A empresa - Goias Caldeiraria'
+          key='title'
+        />
+      </Head>
       <Flex
         justifyContent='center'
         className='container'
@@ -67,12 +77,7 @@ export default function empresa() {
               lg: '70%',
               xl: '70%',
             }}
-            padding={{
-              base: '0%',
-              md: '5%',
-              lg: '5%',
-              xl: '7%',
-            }}
+            paddingBottom='4%'
           >
             <Text
               color='rgba(0, 0, 0, 0.7)'
@@ -242,7 +247,16 @@ export default function empresa() {
             paddingTop='10%'
           >
             {/* Box  */}
-            <Flex justifyContent='center'>
+            <Flex
+              paddingLeft={{
+                base: '0',
+                md: '3%',
+                lg: '3%',
+                xl: '3%',
+              }}
+              width='100%'
+              justifyContent='center'
+            >
               <Flex width='100%' className='box-empresa'>
                 <Flex width='100%' flexDirection='column'>
                   <Flex justifyContent='center' className='title-box-empresa'>
@@ -274,274 +288,37 @@ export default function empresa() {
                     </Flex>
                   </Flex>
                   {/* topicos box */}
-                  <Flex
-                    fontSize={{
-                      base: '1.2rem',
-                      base: '1.8rem',
-                      lg: '.8rem',
-                      xl: '.8rem',
-                    }}
-                  >
-                    <Flex
-                      justifyContent='center'
-                      padding='8px'
-                      flexDirection='column'
-                    >
-                      <Text>
-                        <FaCheck />
-                      </Text>
-                    </Flex>
-                    <Flex
-                      padding='8px 1px'
-                      justifyContent='center'
-                      flexDirection='column'
-                    >
-                      <Text> Áçucar e Álcool </Text>
-                    </Flex>
-                  </Flex>
-                  {/* topicos box */}
-                  {/* topicos box */}
-                  <Flex
-                    fontSize={{
-                      base: '1.2rem',
-                      base: '1.8rem',
-                      lg: '.8rem',
-                      xl: '.8rem',
-                    }}
-                  >
-                    <Flex
-                      justifyContent='center'
-                      padding='8px'
-                      flexDirection='column'
-                    >
-                      <Text>
-                        <FaCheck />
-                      </Text>
-                    </Flex>
-                    <Flex
-                      padding='8px 1px'
-                      justifyContent='center'
-                      flexDirection='column'
-                    >
-                      <Text>Química e Petroquímica</Text>
-                    </Flex>
-                  </Flex>
-                  {/* topicos box */}
-                  {/* topicos box */}
-                  <Flex
-                    fontSize={{
-                      base: '1.2rem',
-                      base: '1.8rem',
-                      lg: '.8rem',
-                      xl: '.8rem',
-                    }}
-                  >
-                    <Flex
-                      justifyContent='center'
-                      padding='8px'
-                      flexDirection='column'
-                    >
-                      <Text>
-                        <FaCheck />
-                      </Text>
-                    </Flex>
-                    <Flex
-                      padding='8px 1px'
-                      justifyContent='center'
-                      flexDirection='column'
-                    >
-                      <Text> Siderurgia </Text>
-                    </Flex>
-                  </Flex>
-                  {/* topicos box */}
-                  {/* topicos box */}
-                  <Flex
-                    fontSize={{
-                      base: '1.2rem',
-                      base: '1.8rem',
-                      lg: '.8rem',
-                      xl: '.8rem',
-                    }}
-                  >
-                    <Flex
-                      justifyContent='center'
-                      padding='8px'
-                      flexDirection='column'
-                    >
-                      <Text>
-                        <FaCheck />
-                      </Text>
-                    </Flex>
-                    <Flex
-                      padding='8px 1px'
-                      justifyContent='center'
-                      flexDirection='column'
-                    >
-                      <Text> Metalurgia </Text>
-                    </Flex>
-                  </Flex>
-                  {/* topicos box */}
-                  {/* topicos box */}
-                  <Flex
-                    fontSize={{
-                      base: '1.2rem',
-                      base: '1.8rem',
-                      lg: '.8rem',
-                      xl: '.8rem',
-                    }}
-                  >
-                    <Flex
-                      justifyContent='center'
-                      padding='8px'
-                      flexDirection='column'
-                    >
-                      <Text>
-                        <FaCheck />
-                      </Text>
-                    </Flex>
-                    <Flex
-                      padding='8px 1px'
-                      justifyContent='center'
-                      flexDirection='column'
-                    >
-                      <Text> Óleo e Gás </Text>
-                    </Flex>
-                  </Flex>
-                  {/* topicos box */}
-                  {/* topicos box */}
-                  <Flex
-                    fontSize={{
-                      base: '1.2rem',
-                      base: '1.8rem',
-                      lg: '.8rem',
-                      xl: '.8rem',
-                    }}
-                  >
-                    <Flex
-                      justifyContent='center'
-                      padding='8px'
-                      flexDirection='column'
-                    >
-                      <Text>
-                        <FaCheck />
-                      </Text>
-                    </Flex>
-                    <Flex
-                      padding='8px 1px'
-                      justifyContent='center'
-                      flexDirection='column'
-                    >
-                      <Text> Mineração </Text>
-                    </Flex>
-                  </Flex>
-                  {/* topicos box */}
-                  {/* topicos box */}
-                  <Flex
-                    fontSize={{
-                      base: '1.2rem',
-                      base: '1.8rem',
-                      lg: '.8rem',
-                      xl: '.8rem',
-                    }}
-                  >
-                    <Flex
-                      justifyContent='center'
-                      padding='8px'
-                      flexDirection='column'
-                    >
-                      <Text>
-                        <FaCheck />
-                      </Text>
-                    </Flex>
-                    <Flex
-                      padding='8px 1px'
-                      justifyContent='center'
-                      flexDirection='column'
-                    >
-                      <Text> Geração de Energia </Text>
-                    </Flex>
-                  </Flex>
-                  {/* topicos box */}
-                  {/* topicos box */}
-                  <Flex
-                    fontSize={{
-                      base: '1.2rem',
-                      base: '1.8rem',
-                      lg: '.8rem',
-                      xl: '.8rem',
-                    }}
-                  >
-                    <Flex
-                      justifyContent='center'
-                      padding='8px'
-                      flexDirection='column'
-                    >
-                      <Text>
-                        <FaCheck />
-                      </Text>
-                    </Flex>
-                    <Flex
-                      padding='8px 1px'
-                      justifyContent='center'
-                      flexDirection='column'
-                    >
-                      <Text> Movimentação de Carga </Text>
-                    </Flex>
-                  </Flex>
-                  {/* topicos box */}
-                  {/* topicos box */}
-                  <Flex
-                    fontSize={{
-                      base: '1.2rem',
-                      base: '1.8rem',
-                      lg: '.8rem',
-                      xl: '.8rem',
-                    }}
-                  >
-                    <Flex
-                      justifyContent='center'
-                      padding='8px'
-                      flexDirection='column'
-                    >
-                      <Text>
-                        <FaCheck />
-                      </Text>
-                    </Flex>
-                    <Flex
-                      padding='8px 1px'
-                      justifyContent='center'
-                      flexDirection='column'
-                    >
-                      <Text> Alimentício </Text>
-                    </Flex>
-                  </Flex>
-                  {/* topicos box */}
-                  {/* topicos box */}
-                  <Flex
-                    fontSize={{
-                      base: '1.2rem',
-                      base: '1.8rem',
-                      lg: '.8rem',
-                      xl: '.8rem',
-                    }}
-                  >
-                    <Flex
-                      justifyContent='center'
-                      padding='8px'
-                      flexDirection='column'
-                    >
-                      <Text>
-                        <FaCheck />
-                      </Text>
-                    </Flex>
-                    <Flex
-                      padding='8px 1px'
-                      justifyContent='center'
-                      flexDirection='column'
-                    >
-                      <Text> Biodiesel </Text>
-                    </Flex>
-                  </Flex>
+                  {BoxEmpresa.map(box => {
+                    return (
+                      <Flex
+                        key={box.key}
+                        fontSize={{
+                          base: '1.2rem',
+                          base: '1.8rem',
+                          lg: '.8rem',
+                          xl: '.8rem',
+                        }}
+                      >
+                        <Flex
+                          justifyContent='center'
+                          padding='8px'
+                          flexDirection='column'
+                        >
+                          <Text>
+                            <FaCheck />
+                          </Text>
+                        </Flex>
+                        <Flex
+                          padding='8px 1px'
+                          justifyContent='center'
+                          flexDirection='column'
+                        >
+                          <Text>{box.titulo}</Text>
+                        </Flex>
+                      </Flex>
+                    );
+                  })}
+
                   {/* topicos box */}
                 </Flex>
               </Flex>

@@ -11,14 +11,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
-          <meta name='description' content='Goias Caldeiraria' />
-          <meta
-            name='keywords'
-            content='Goias,Caldeiraria,mineiros,goias,solda,usina,eth'
-          />
-          <meta name='author' content='Jefferson Felizardo' />
-
           <link
             href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap'
             rel='stylesheet'

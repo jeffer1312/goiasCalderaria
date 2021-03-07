@@ -25,8 +25,16 @@ function MyApp({ Component, pageProps }) {
     <ThemeContainer>
       <Flex flexDirection='column' className='backgroundColor'>
         <Head>
-          <title>Goias Caldeiraria</title>
-          <meta property='og:title' content='Goias Caldeiraria' key='title' />
+          <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
+          <meta
+            name='description'
+            content='A Goias Caldeiraria tem como foco valorizar as pessoas se preocupando com o bem-estar e união de seus colaboradores e clientes, atendendo as necessidades, exigências e expectativas de forma ágil, flexível e pontual. '
+          />
+          <meta
+            name='keywords'
+            content='caldeiraria, inspeção, soldagens especiais, áçucar e álcool,  química, petroquímica,  siderurgia,  metalurgia  óleo e gás,  mineração,  geração de energia,  movimentação de carga,  alimentício,  biodiesel, Goias , Goiás Caldeiraria ,mineiros ,goias ,solda ,usina ,eth '
+          />
+          <meta name='author' content='Jefferson Felizardo' />
         </Head>
         <Grid
           as='main'

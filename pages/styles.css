@@ -65,14 +65,14 @@ body {
 }
 .box-empresa {
   border: 2px solid red;
-  height: 410px;
+  margin: 2% 0;
+  /* height: 410px; */
 }
 .mapa-localizacao {
   background-color: #ccc;
 }
 .box-contato {
   border: 2px solid red;
-  height: 330px;
 }
 .title-box-empresa {
   background-color: red;

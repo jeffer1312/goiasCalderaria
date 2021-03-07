@@ -1,36 +1,44 @@
 //import Head from "next/head";
-import { Flex, Heading, List, ListItem, Text } from "@chakra-ui/core";
+import { Flex, Heading, List, ListItem, Text } from '@chakra-ui/core';
 
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination } from "swiper";
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination } from 'swiper';
+import Head from 'next/head';
 
-import Typical from "react-typical";
 SwiperCore.use([Pagination]);
 function servicos() {
   return (
-    <Flex flexDirection="column" gridArea="content">
-      <Flex justifyContent="center">
-        <Heading marginTop="60px" fontSize="6xl" color="rgb(130,130,130)">
+    <Flex flexDirection='column' gridArea='content'>
+      <Head>
+        <title>Servicos - Goias Caldeiraria</title>
+        <meta
+          property='og:title'
+          content='Servicos - Goias Caldeiraria'
+          key='title'
+        />
+      </Head>
+      <Flex justifyContent='center'>
+        <Heading marginTop='60px' fontSize='6xl' color='rgb(130,130,130)'>
           Produtos e Serviços
         </Heading>
       </Flex>
-      <Flex justifyContent="center">
-        <div className="separator"></div>
+      <Flex justifyContent='center'>
+        <div className='separator'></div>
       </Flex>
       <Flex
-        flexDirection="row"
-        justifyContent="center"
-        className="card-Services "
+        flexDirection='row'
+        justifyContent='center'
+        className='card-Services '
       >
-        <Flex className="container" flexDirection="column">
+        <Flex className='container' flexDirection='column'>
           {/* itens */}
           <Flex>
-            <Flex width="100%" flexDirection="column">
-              <Heading textAlign="start" fontSize="2xl" paddingLeft="10%">
+            <Flex width='100%' flexDirection='column'>
+              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
                 Manutenção em implementos agricolas
               </Heading>
-              <Text textAlign="start" paddingTop="3%" paddingLeft="10%">
+              <Text textAlign='start' paddingTop='3%' paddingLeft='10%'>
                 <ListItem>teste</ListItem>
                 <ListItem>teste</ListItem>
                 <ListItem>teste</ListItem>
@@ -38,28 +46,18 @@ function servicos() {
                 <ListItem>teste</ListItem>
               </Text>
             </Flex>
-            <Flex width="35%">
+            <Flex width='35%'>
               <Swiper
-                className="card-service-image"
+                className='card-service-image'
                 slidesPerView={1}
                 autoplay
                 pagination={{ clickable: true }}
               >
                 <SwiperSlide>
-                  <Image
-                    src="/teste1.jpg"
-                    alt=""
-                    width={600}
-                    height={350}
-                  />
+                  <Image src='/teste1.jpg' alt='' width={600} height={350} />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image
-                    src="/teste2.jpg"
-                    alt=""
-                    width={600}
-                    height={350}
-                  />
+                  <Image src='/teste2.jpg' alt='' width={600} height={350} />
                 </SwiperSlide>
               </Swiper>
             </Flex>
@@ -68,11 +66,11 @@ function servicos() {
 
           {/* itens */}
           <Flex>
-            <Flex width="100%" flexDirection="column">
-              <Heading textAlign="start" fontSize="2xl" paddingLeft="10%">
+            <Flex width='100%' flexDirection='column'>
+              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
                 Manutenção em implementos agricolas
               </Heading>
-              <Text textAlign="start" paddingTop="3%" paddingLeft="10%">
+              <Text textAlign='start' paddingTop='3%' paddingLeft='10%'>
                 <ListItem>teste</ListItem>
                 <ListItem>teste</ListItem>
                 <ListItem>teste</ListItem>
@@ -80,28 +78,18 @@ function servicos() {
                 <ListItem>teste</ListItem>
               </Text>
             </Flex>
-            <Flex width="35%">
+            <Flex width='35%'>
               <Swiper
-                className="card-service-image"
+                className='card-service-image'
                 slidesPerView={1}
                 autoplay
                 pagination={{ clickable: true }}
               >
                 <SwiperSlide>
-                  <Image
-                    src="/teste1.jpg"
-                    alt=""
-                    width={600}
-                    height={350}
-                  />
+                  <Image src='/teste1.jpg' alt='' width={600} height={350} />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image
-                    src="/teste3.jpg"
-                    alt=""
-                    width={600}
-                    height={350}
-                  />
+                  <Image src='/teste3.jpg' alt='' width={600} height={350} />
                 </SwiperSlide>
               </Swiper>
             </Flex>
@@ -109,11 +97,11 @@ function servicos() {
           {/* fim items */}
           {/* itens */}
           <Flex>
-            <Flex width="100%" flexDirection="column">
-              <Heading textAlign="start" fontSize="2xl" paddingLeft="10%">
+            <Flex width='100%' flexDirection='column'>
+              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
                 Manutenção em implementos agricolas
               </Heading>
-              <Text textAlign="start" paddingTop="3%" paddingLeft="10%">
+              <Text textAlign='start' paddingTop='3%' paddingLeft='10%'>
                 <ListItem>teste</ListItem>
                 <ListItem>teste</ListItem>
                 <ListItem>teste</ListItem>
@@ -121,28 +109,18 @@ function servicos() {
                 <ListItem>teste</ListItem>
               </Text>
             </Flex>
-            <Flex width="35%">
+            <Flex width='35%'>
               <Swiper
-                className="card-service-image"
+                className='card-service-image'
                 slidesPerView={1}
                 autoplay
                 pagination={{ clickable: true }}
               >
                 <SwiperSlide>
-                  <Image
-                    src="/teste1.jpg"
-                    alt=""
-                    width={600}
-                    height={350}
-                  />
+                  <Image src='/teste1.jpg' alt='' width={600} height={350} />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image
-                    src="/teste3.jpg"
-                    alt=""
-                    width={600}
-                    height={350}
-                  />
+                  <Image src='/teste3.jpg' alt='' width={600} height={350} />
                 </SwiperSlide>
               </Swiper>
             </Flex>
@@ -150,11 +128,11 @@ function servicos() {
           {/* fim items */}
 
           <Flex>
-            <Flex width="100%" flexDirection="column">
-              <Heading textAlign="start" fontSize="2xl" paddingLeft="10%">
+            <Flex width='100%' flexDirection='column'>
+              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
                 Manutenção em implementos agricolas
               </Heading>
-              <Text textAlign="start" paddingTop="3%" paddingLeft="10%">
+              <Text textAlign='start' paddingTop='3%' paddingLeft='10%'>
                 <ListItem>teste</ListItem>
                 <ListItem>teste</ListItem>
                 <ListItem>teste</ListItem>
@@ -162,28 +140,18 @@ function servicos() {
                 <ListItem>teste</ListItem>
               </Text>
             </Flex>
-            <Flex width="35%">
+            <Flex width='35%'>
               <Swiper
-                className="card-service-image"
+                className='card-service-image'
                 slidesPerView={1}
                 autoplay
                 pagination={{ clickable: true }}
               >
                 <SwiperSlide>
-                  <Image
-                    src="/teste1.jpg"
-                    alt=""
-                    width={600}
-                    height={350}
-                  />
+                  <Image src='/teste1.jpg' alt='' width={600} height={350} />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image
-                    src="/teste2.jpg"
-                    alt=""
-                    width={600}
-                    height={350}
-                  />
+                  <Image src='/teste2.jpg' alt='' width={600} height={350} />
                 </SwiperSlide>
               </Swiper>
             </Flex>

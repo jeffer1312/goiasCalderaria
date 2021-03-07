@@ -7,8 +7,9 @@ import {
   FaTractor,
   FaFireAlt,
 } from 'react-icons/fa';
-import Image from 'next/image';
+import Head from 'next/head';
 
+import { cardServicos, ProdServico } from '../arquivosDb/home.js';
 export default function Home() {
   return (
     <>
@@ -26,6 +27,11 @@ export default function Home() {
           xl: '561px',
         }}
       >
+        <Head>
+          <title>Goias Caldeiraria</title>
+          <meta property='og:title' content='Goias Caldeiraria' key='title' />
+        </Head>
+
         <Flex
           flexDirection='column'
           alignContent='center'
@@ -151,206 +157,55 @@ export default function Home() {
           className='container'
         >
           {/* Card Servico */}
-          <Flex
-            width={{
-              base: '100%',
-              md: '48%',
-              lg: '25%',
-              xl: '25%',
-            }}
-            height='450px'
-            justifyContent='center'
-            className='card-servicos  animate__animated animate__backInLeft'
-          >
-            <Flex flexDirection='column'>
-              <Flex justifyContent='center'>
-                <Text
-                  padding='10% 0'
-                  fontSize={{
-                    base: '3rem',
-                    md: '1rem',
-                    lg: '1.2rem',
-                    xl: '1.5rem',
-                  }}
-                >
-                  Manutenção industrial
-                </Text>
-              </Flex>
-              <Flex justifyContent='center'>
-                <Text
-                  fontSize={{
-                    base: '3rem',
-                    md: '2rem',
-                    lg: '2.5rem',
-                    xl: '3rem',
-                  }}
-                >
-                  <FaIndustry />
-                </Text>
-              </Flex>
+          {cardServicos.map(card => {
+            return (
+              <Flex
+                width={{
+                  base: '100%',
+                  md: '48%',
+                  lg: '25%',
+                  xl: '25%',
+                }}
+                key={card.key}
+                height='450px'
+                justifyContent='center'
+                className={card.className}
+              >
+                <Flex flexDirection='column'>
+                  <Flex justifyContent='center'>
+                    <Text
+                      padding='10% 0'
+                      fontSize={{
+                        base: '3rem',
+                        md: '1rem',
+                        lg: '1.2rem',
+                        xl: '1.5rem',
+                      }}
+                    >
+                      {card.titulo}
+                    </Text>
+                  </Flex>
+                  <Flex justifyContent='center'>
+                    <Text
+                      fontSize={{
+                        base: '3rem',
+                        md: '2rem',
+                        lg: '2.5rem',
+                        xl: '3rem',
+                      }}
+                    >
+                      <FaIndustry />
+                    </Text>
+                  </Flex>
 
-              <Flex overflow='hidden' padding='8%' justifyContent='center'>
-                <Text>
-                  A manutenção industrial consiste num conjunto de práticas que
-                  busca fiscalizar e manter instrumentos e máquinas em pleno
-                  funcionamento. Além disso, é dever da manutenção evitar a
-                  ocorrência de acidentes que afetem os colaboradores ou o
-                  meio-ambiente. Isso significa que certos componentes vão
-                  exigir maior cuidado que outros, como tubulações de gás
-                  natural ou caldeiras industriais.
-                </Text>
+                  <Flex overflow='hidden' padding='10%' justifyContent='center'>
+                    <Text>{card.descricao}</Text>
+                  </Flex>
+                </Flex>
               </Flex>
-            </Flex>
-          </Flex>
-          {/* Card Servico */}
+            );
+          })}
 
-          {/* Card Servico */}
-          <Flex
-            width={{
-              base: '100%',
-              md: '48%',
-              lg: '25%',
-              xl: '25%',
-            }}
-            height='450px'
-            justifyContent='center'
-            className='card-servicos animate__animated animate__backInUp'
-          >
-            <Flex flexDirection='column'>
-              <Flex justifyContent='center'>
-                <Text
-                  padding='10% 0'
-                  fontSize={{
-                    base: '3rem',
-                    md: '1rem',
-                    lg: '1.2rem',
-                    xl: '1.5rem',
-                  }}
-                >
-                  Manutenção agrícola
-                </Text>
-              </Flex>
-              <Flex justifyContent='center'>
-                <Text
-                  fontSize={{
-                    base: '3rem',
-                    md: '2rem',
-                    lg: '2.5rem',
-                    xl: '3rem',
-                  }}
-                >
-                  <FaTractor />
-                </Text>
-              </Flex>
-
-              <Flex padding='10%' justifyContent='center'>
-                <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Repudiandae fugiat magnam odit esse pariatur nostrum facilis
-                  ip.
-                </Text>
-              </Flex>
-            </Flex>
-          </Flex>
-          {/* Card Servico */}
-
-          {/* Card Servico */}
-          <Flex
-            width={{
-              base: '100%',
-              md: '48%',
-              lg: '25%',
-              xl: '25%',
-            }}
-            height='450px'
-            justifyContent='center'
-            className='card-servicos animate__animated animate__backInUp'
-          >
-            <Flex flexDirection='column'>
-              <Flex justifyContent='center'>
-                <Text
-                  padding='10% 0'
-                  fontSize={{
-                    base: '3rem',
-                    md: '1rem',
-                    lg: '1.2rem',
-                    xl: '1.5rem',
-                  }}
-                >
-                  Caldeiraria
-                </Text>
-              </Flex>
-              <Flex justifyContent='center'>
-                <Text
-                  fontSize={{
-                    base: '3rem',
-                    md: '2rem',
-                    lg: '2.5rem',
-                    xl: '3rem',
-                  }}
-                >
-                  <FaFilter />
-                </Text>
-              </Flex>
-
-              <Flex padding='10%' justifyContent='center'>
-                <Text>
-                  Trabalhos de caldeiraria mediante projetos desenvolvidos
-                  juntamente com seus clientes, como por exemplo: dispositivos,
-                  trocadores de calor, tubulações, conexões, etc.
-                </Text>
-              </Flex>
-            </Flex>
-          </Flex>
-          {/* Card Servico */}
-          {/* Card Servico */}
-          <Flex
-            width={{
-              base: '100%',
-              md: '48%',
-              lg: '25%',
-              xl: '25%',
-            }}
-            height='450px'
-            justifyContent='center'
-            className='card-servicos animate__animated animate__backInRight'
-          >
-            <Flex flexDirection='column'>
-              <Flex justifyContent='center'>
-                <Text
-                  padding='10% 0'
-                  fontSize={{
-                    base: '3rem',
-                    md: '1rem',
-                    lg: '1.2rem',
-                    xl: '1.5rem',
-                  }}
-                >
-                  Soldagens em geral
-                </Text>
-              </Flex>
-              <Flex justifyContent='center'>
-                <Text
-                  fontSize={{
-                    base: '3rem',
-                    md: '2rem',
-                    lg: '2.5rem',
-                    xl: '3rem',
-                  }}
-                >
-                  <FaFireAlt />
-                </Text>
-              </Flex>
-
-              <Flex padding='10%' justifyContent='center'>
-                <Text>
-                  Trabalhos de caldeiraria mediante projetos desenvolvidos
-                  juntamente com seus clientes, como por exemplo: dispositivos,
-                  trocadores de calor, tubulações, conexões, etc.
-                </Text>
-              </Flex>
-            </Flex>
-          </Flex>
           {/* Card Servico */}
         </Flex>
       </Flex>
@@ -378,162 +233,66 @@ export default function Home() {
             ></path>
           </svg>
         </Flex>
-        {/* produtos e servicos imagens 1 */}
-        <Flex flexWrap='wrap' className='servicos ' height='650px' width='100%'>
-          <Flex></Flex>
-          <Flex
-            order={{
-              base: '2',
-              md: '1',
-              lg: '1',
-              xl: '1',
-            }}
-            width={{
-              base: '100%',
-              md: '50%',
-              lg: '50%',
-              xl: '50%',
-            }}
-            className='Image-servico '
-          ></Flex>
+        {/* produtos e servicos imagens  */}
+        {ProdServico.map(servico => {
+          return (
+            <Flex
+              key={servico.key}
+              flexWrap='wrap'
+              className='servicos '
+              height='650px'
+              width='100%'
+            >
+              <Flex
+                order={{
+                  base: '2',
+                  md: servico.orderImg,
+                  lg: servico.orderImg,
+                  xl: servico.orderImg,
+                }}
+                width={{
+                  base: '100%',
+                  md: '50%',
+                  lg: '50%',
+                  xl: '50%',
+                }}
+                className={servico.className}
+              ></Flex>
 
-          <Flex
-            order={{
-              base: '1',
-              md: '2',
-              lg: '2',
-              xl: '2',
-            }}
-            width={{
-              base: '100%',
-              md: '50%',
-              lg: '50%',
-              xl: '50%',
-            }}
-            flexDirection='column'
-            justifyContent={{
-              base: 'flex-end',
-              md: 'center',
-              lg: 'center',
-              xl: 'center',
-            }}
-            className='servicos-text '
-          >
-            <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
-              Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
-              Tubulações
-            </Heading>
-            <Text textAlign='start' padding='10%'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Exercitationem, illum. Tempora expedita maiores animi ratione odit
-              ullam alias, nesciunt nostrum sint cupiditate repellendus ducimus
-              voluptatum quisquam, rerum iusto dolorum totam.
-            </Text>
-          </Flex>
-        </Flex>
-        {/* Fim produtos e servicos imagens 1*/}
+              <Flex
+                order={{
+                  base: '1',
+                  md: servico.orderText,
+                  lg: servico.orderText,
+                  xl: servico.orderText,
+                }}
+                width={{
+                  base: '100%',
+                  md: '50%',
+                  lg: '50%',
+                  xl: '50%',
+                }}
+                flexDirection='column'
+                justifyContent={{
+                  base: 'flex-end',
+                  md: 'center',
+                  lg: 'center',
+                  xl: 'center',
+                }}
+                className='servicos-text '
+              >
+                <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
+                  {servico.titulo}
+                </Heading>
+                <Text textAlign='start' padding='10%'>
+                  {servico.descricao}
+                </Text>
+              </Flex>
+            </Flex>
+          );
+        })}
+        {/* Fim produtos e servicos imagens*/}
 
-        {/* produtos e servicos imagens 2 */}
-        <Flex
-          className='servicos'
-          flexWrap='wrap'
-          backgroundColor='#fff'
-          height='650px'
-          width='100%'
-        >
-          <Flex
-            order={{
-              base: '1',
-              md: '2',
-              lg: '2',
-              xl: '2',
-            }}
-            width={{
-              base: '100%',
-              md: '50%',
-              lg: '50%',
-              xl: '50%',
-            }}
-            flexDirection='column'
-            justifyContent='center'
-            className='servicos-text'
-          >
-            <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
-              Manutenção de Maquinário Agrícola
-            </Heading>
-            <Text textAlign='start' padding='10%'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Exercitationem, illum. Tempora expedita maiores animi ratione odit
-              ullam alias, nesciunt nostrum sint cupiditate repellendus ducimus
-              voluptatum quisquam, rerum iusto dolorum totam.
-            </Text>
-          </Flex>
-          <Flex
-            order={{
-              base: '2',
-              md: '2',
-              lg: '2',
-              xl: '2',
-            }}
-            width={{
-              base: '100%',
-              md: '50%',
-              lg: '50%',
-              xl: '50%',
-            }}
-            className='Image-servico1'
-          ></Flex>
-        </Flex>
-        {/* Fim produtos e servicos imagens 2 */}
-
-        {/* produtos e servicos imagens 3 */}
-        <Flex flexWrap='wrap' className='servicos' height='650px' width='100%'>
-          <Flex
-            order={{
-              base: '2',
-              md: '1',
-              lg: '1',
-              xl: '1',
-            }}
-            width={{
-              base: '100%',
-              md: '50%',
-              lg: '50%',
-              xl: '50%',
-            }}
-            className='Image-servico2'
-          ></Flex>
-
-          <Flex
-            order={{
-              base: '1',
-              md: '2',
-              lg: '2',
-              xl: '2',
-            }}
-            width={{
-              base: '100%',
-              md: '50%',
-              lg: '50%',
-              xl: '50%',
-            }}
-            flexDirection='column'
-            justifyContent='center'
-            className='servicos-text'
-          >
-            <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
-              Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
-              Tubulações
-            </Heading>
-            <Text textAlign='start' padding='10%'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Exercitationem, illum. Tempora expedita maiores animi ratione odit
-              ullam alias, nesciunt nostrum sint cupiditate repellendus ducimus
-              voluptatum quisquam, rerum iusto dolorum totam.
-            </Text>
-          </Flex>
-        </Flex>
-        {/* Fim produtos e servicos imagens 3 */}
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1300 220'>
           <path
             fill='#fff'
