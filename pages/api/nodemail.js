@@ -2,6 +2,7 @@ const mailer = require('nodemailer');
 
 const user = process.env.USER; //'sitegoiascaldeiraria@gmail.com'; //
 const pass = process.env.PASS; // 'Gustavo1*';
+const FromEmail = process.env.EMAIL;
 
 module.exports = (email, nome, mensagem) => {
   console.log(user, pass);
@@ -20,7 +21,7 @@ module.exports = (email, nome, mensagem) => {
 
   const mail = {
     from: 'Formulario de Contato Site <sitegoiascaldeiraria@gmail.com>',
-    to: 'jeffer1312@gmail.com', //'goias.montagem@gmail.com',
+    to: FromEmail, //'goias.montagem@gmail.com',
     subject: `Formulario de Contato Site Goias Caldeiraria`,
     text: `${nome} deixou seu email ${email}  para contato e deixou essa mensagem ${mensagem}`,
   };
