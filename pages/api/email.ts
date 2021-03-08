@@ -7,5 +7,5 @@ export default (req: NowRequest,res:NowResponse) =>{
    .then((response) => res.json(response))
    .catch((error) => res.json(error));
    
-   return res.status(201).json({message:'enviado com sucesso'})
+   
 }
