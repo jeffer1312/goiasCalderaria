@@ -4,18 +4,19 @@ const pass = process.env.pass;
 
 module.exports = (email, nome, mensagem) => {
   const smtpTransport = mailer.createTransport({
-    host: 'smtp.umbler.com',
-    port: 587,
-    secure: false, //SSL/TLS
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, //SSL/TLS
     auth: {
+      type: 'OAuth2',
       user,
       pass,
     },
   });
 
   const mail = {
-    from: user,
-    to: email,
+    from: 'goias.montagem@gmail.com',
+    to: 'goias.montagem@gmail.com',
     subject: `Formulario de Contato Site Goias Caldeiraria`,
     text: `${nome} deixou seu email ${email}  para contato e deixou essa mensagem ${mensagem}`,
   };

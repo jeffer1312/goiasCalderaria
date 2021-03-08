@@ -1,13 +1,6 @@
 import ThemeContainer from '../contexts/theme/ThemeContainer';
-import {
-  Flex,
-  Grid,
-  Heading,
-  List,
-  ListItem,
-  Text,
-  Image,
-} from '@chakra-ui/core';
+import { Flex, Grid, Text } from '@chakra-ui/core';
+import Image from 'next/image';
 import './styles.css';
 import 'animate.css';
 import { useState } from 'react';
@@ -66,17 +59,21 @@ function MyApp({ Component, pageProps }) {
               }}
               width='100%'
             >
-              <Flex flexDirection='column' justifyContent='center'>
+              <Flex
+                width={{
+                  base: '350px',
+                  md: '500px',
+                  lg: '600px',
+                  xl: '600px',
+                }}
+                flexDirection='column'
+                justifyContent='center'
+              >
                 <Image
-                  objectFit='cover'
+                  width={600}
+                  height={200}
                   src='/logo.png'
                   alt='Goias Caldeiraria'
-                  width={{
-                    base: '350px',
-                    md: '500px',
-                    lg: '600px',
-                    xl: '600px',
-                  }}
                 />
               </Flex>
             </Flex>
@@ -165,7 +162,23 @@ function MyApp({ Component, pageProps }) {
             // backgroundColor='#129e38'
           >
             <Flex justifyContent='center' className='logoFooter'>
-              <img src='/logo.png' alt=''></img>
+              <Flex
+                width={{
+                  base: '370px',
+                  md: '400px',
+                  lg: '500px',
+                  xl: '500px',
+                }}
+                flexDirection='column'
+                justifyContent='center'
+              >
+                <Image
+                  width={500}
+                  height={300}
+                  src='/logo.png'
+                  alt='Goias Caldeiraria'
+                />
+              </Flex>
             </Flex>
             <Flex justifyContent='center'>
               <Flex color='#000' className='infoFooter' flexDirection='column'>

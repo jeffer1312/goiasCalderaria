@@ -8,8 +8,9 @@ import {
   FaFireAlt,
 } from 'react-icons/fa';
 import Head from 'next/head';
+import Image from 'next/image';
 
-import { cardServicos, ProdServico } from '../arquivosDb/home.js';
+import { cardServicos, ProdServico, Parceiros } from '../arquivosDb/home.js';
 export default function Home() {
   return (
     <>
@@ -31,7 +32,6 @@ export default function Home() {
           <title>Goias Caldeiraria</title>
           <meta property='og:title' content='Goias Caldeiraria' key='title' />
         </Head>
-
         <Flex
           flexDirection='column'
           alignContent='center'
@@ -194,7 +194,15 @@ export default function Home() {
                         xl: '3rem',
                       }}
                     >
-                      <FaIndustry />
+                      {card.icone === 'FaFilter' ? (
+                        <FaFilter />
+                      ) : card.icone === 'FaTractor' ? (
+                        <FaTractor />
+                      ) : card.icone === 'FaFireAlt' ? (
+                        <FaFireAlt />
+                      ) : (
+                        <FaIndustry />
+                      )}
                     </Text>
                   </Flex>
 
@@ -300,6 +308,43 @@ export default function Home() {
             d='M0,0L40,5.3C80,11,160,21,240,53.3C320,85,400,139,480,154.7C560,171,640,149,720,138.7C800,128,880,128,960,122.7C1040,117,1120,107,1200,133.3C1280,160,1360,224,1400,256L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z'
           ></path>
         </svg>
+
+        <Flex flexWrap='wrap' className='container' justifyContent='center'>
+          <Flex justifyContent='center' width='100%'>
+            <Heading
+              color='rgba(0, 0, 0, 0.7)'
+              fontFamily='Akaya Telivigala, cursive'
+              marginTop='60px'
+              fontSize='6xl'
+            >
+              Nossos Clientes
+            </Heading>
+          </Flex>
+
+          {/* {Parceiros.map((parceiro) => {
+            return (
+              <Flex order={parceiro.order} key={parceiro.key} width="50%">
+                <Flex
+                  width={{
+                    base: "450px",
+                    md: "300px",
+                    lg: "300px",
+                    xl: "300px",
+                  }}
+                  flexDirection="column"
+                  justifyContent="center"
+                >
+                  <Image
+                    width={900}
+                    height={200}
+                    src={parceiro.src}
+                    alt="Goias Caldeiraria"
+                  />
+                </Flex>
+              </Flex>
+            );
+          })} */}
+        </Flex>
       </Flex>
     </>
   );
