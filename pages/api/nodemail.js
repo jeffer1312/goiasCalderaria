@@ -1,22 +1,26 @@
 const mailer = require('nodemailer');
-const user = process.env.users;
-const pass = process.env.pass;
+
+const user = process.env.USER; //'sitegoiascaldeiraria@gmail.com'; //
+const pass = process.env.PASS; // 'Gustavo1*';
 
 module.exports = (email, nome, mensagem) => {
+  console.log(user, pass);
   const smtpTransport = mailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, //SSL/TLS
+    port: 587,
+    secure: false, //SSL/TLS
     auth: {
-      type: 'OAuth2',
       user,
       pass,
+    },
+    tls: {
+      rejectUnauthorized: false,
     },
   });
 
   const mail = {
-    from: 'goias.montagem@gmail.com',
-    to: 'goias.montagem@gmail.com',
+    from: 'Formulario de Contato Site <sitegoiascaldeiraria@gmail.com>',
+    to: 'jeffer1312@gmail.com', //'goias.montagem@gmail.com',
     subject: `Formulario de Contato Site Goias Caldeiraria`,
     text: `${nome} deixou seu email ${email}  para contato e deixou essa mensagem ${mensagem}`,
   };
