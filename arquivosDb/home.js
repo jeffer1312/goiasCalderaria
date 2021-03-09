@@ -92,6 +92,7 @@ export const Parceiros = [
     md: '400px',
     lg: '400px',
     xl: '600px',
+    alt: 'gafor',
   },
   {
     key: '1',
@@ -104,6 +105,7 @@ export const Parceiros = [
     md: '300px',
     lg: '300px',
     xl: '300px',
+    alt: 'atvos',
   },
   {
     key: '2',
@@ -116,6 +118,7 @@ export const Parceiros = [
     md: '300px',
     lg: '300px',
     xl: '300px',
+    alt: 'conlog',
   },
   {
     key: '3',
@@ -128,6 +131,7 @@ export const Parceiros = [
     md: '300px',
     lg: '300px',
     xl: '300px',
+    alt: 'jsl',
   },
   {
     key: '4',
@@ -140,5 +144,6 @@ export const Parceiros = [
     md: '400px',
     lg: '400px',
     xl: '600px',
+    alt: 'marfrig',
   },
 ];

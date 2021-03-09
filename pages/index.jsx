@@ -351,7 +351,7 @@ export default function Home() {
                     width={parceiro.width}
                     height={parceiro.height}
                     src={parceiro.src}
-                    alt='Goias Caldeiraria'
+                    alt={parceiro.alt}
                   />
                 </Flex>
               </Flex>
