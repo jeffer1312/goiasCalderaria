@@ -321,29 +321,42 @@ export default function Home() {
             </Heading>
           </Flex>
 
-          {/* {Parceiros.map((parceiro) => {
+          {Parceiros.map(parceiro => {
             return (
-              <Flex order={parceiro.order} key={parceiro.key} width="50%">
+              <Flex
+                order={parceiro.order}
+                key={parceiro.key}
+                width={{
+                  base: '100%',
+                  md: '50%',
+                  lg: '50%',
+                  xl: '50%',
+                }}
+                justifyContent='center'
+                padding='5%'
+                height={parceiro.height}
+              >
                 <Flex
                   width={{
-                    base: "450px",
-                    md: "300px",
-                    lg: "300px",
-                    xl: "300px",
+                    base: parceiro.base,
+                    md: parceiro.md,
+                    lg: parceiro.lg,
+                    xl: parceiro.xl,
                   }}
-                  flexDirection="column"
-                  justifyContent="center"
+                  flexDirection='column'
+                  justifyContent='center'
+                  backgroundColor={parceiro.background}
                 >
                   <Image
-                    width={900}
-                    height={200}
+                    width={parceiro.width}
+                    height={parceiro.height}
                     src={parceiro.src}
-                    alt="Goias Caldeiraria"
+                    alt='Goias Caldeiraria'
                   />
                 </Flex>
               </Flex>
             );
-          })} */}
+          })}
         </Flex>
       </Flex>
     </>
