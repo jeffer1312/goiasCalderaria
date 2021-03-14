@@ -16,6 +16,10 @@ function MyApp({ Component, pageProps }) {
     <ThemeContainer>
       <Flex flexDirection='column' className='backgroundColor'>
         <Head>
+          <meta
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+          />
           <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
           <meta
             name='description'
@@ -26,10 +30,6 @@ function MyApp({ Component, pageProps }) {
             content='caldeiraria, inspeção, soldagens especiais, áçucar e álcool,  química, petroquímica,  siderurgia,  metalurgia  óleo e gás,  mineração,  geração de energia,  movimentação de carga,  alimentício,  biodiesel, Goias , Goiás Caldeiraria ,mineiros ,goias ,solda ,usina ,eth '
           />
           <meta name='author' content='Jefferson Felizardo' />
-          <meta
-            name='viewport'
-            content='width:device-width, initial-scale=1.0'
-          />
         </Head>
         <Grid
           as='main'

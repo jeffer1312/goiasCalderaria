@@ -81,7 +81,7 @@ function servicos() {
         </Head>
         <Flex justifyContent='center'>
           <Heading marginTop='60px' fontSize='6xl' color='rgb(130,130,130)'>
-            Produtos e Serviços
+            Galeria de Imagens
           </Heading>
         </Flex>
         <Flex justifyContent='center'>
@@ -98,56 +98,54 @@ function servicos() {
               {/* BOX */}
               {ImgServicos.map(servico => {
                 return (
-                  <>
-                    <Flex
-                      className='box-galeria'
-                      key={servico.servico}
-                      width={{
-                        base: '100%',
-                        md: '100%',
-                        lg: '33%',
-                        xl: '31%',
-                      }}
-                      justifyContent='center'
-                      flexDirection='column'
+                  <Flex
+                    className='box-galeria'
+                    key={servico.key}
+                    width={{
+                      base: '100%',
+                      md: '100%',
+                      lg: '33%',
+                      xl: '31%',
+                    }}
+                    justifyContent='center'
+                    flexDirection='column'
+                  >
+                    <Box
+                      onClick={() => openModal(servico.servico)}
+                      borderWidth='1px'
+                      borderRadius='lg'
+                      overflow='hidden'
                     >
-                      <Box
-                        onClick={() => openModal(servico.servico)}
-                        borderWidth='1px'
-                        borderRadius='lg'
-                        overflow='hidden'
-                      >
-                        <ImageChacra src={servico.src} alt={servico.text} />
+                      <ImageChacra src={servico.src} alt={servico.text} />
 
-                        <Box p='6'>
-                          <Box d='flex' alignItems='baseline'></Box>
+                      <Box p='6'>
+                        <Box d='flex' alignItems='baseline'></Box>
 
+                        <Box
+                          mt='1'
+                          fontWeight='semibold'
+                          as='h4'
+                          lineHeight='tight'
+                          isTruncated
+                        >
+                          {servico.text}
+                        </Box>
+
+                        <Box>
+                          <Box as='span' color='gray.600' fontSize='sm'></Box>
+                        </Box>
+
+                        <Box d='flex' mt='2' alignItems='center'>
                           <Box
-                            mt='1'
-                            fontWeight='semibold'
-                            as='h4'
-                            lineHeight='tight'
-                            isTruncated
-                          >
-                            {servico.text}
-                          </Box>
-
-                          <Box>
-                            <Box as='span' color='gray.600' fontSize='sm'></Box>
-                          </Box>
-
-                          <Box d='flex' mt='2' alignItems='center'>
-                            <Box
-                              as='span'
-                              ml='2'
-                              color='gray.600'
-                              fontSize='sm'
-                            ></Box>
-                          </Box>
+                            as='span'
+                            ml='2'
+                            color='gray.600'
+                            fontSize='sm'
+                          ></Box>
                         </Box>
                       </Box>
-                    </Flex>
-                  </>
+                    </Box>
+                  </Flex>
                 );
               })}
               {/* BOX */}
