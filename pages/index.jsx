@@ -1,5 +1,5 @@
 //import Head from "next/head";
-import { Flex, Heading, Text, List } from '@chakra-ui/core';
+import { Flex, Heading, Text, List } from '@chakra-ui/react';
 import {
   FaCheck,
   FaFilter,
@@ -309,7 +309,7 @@ export default function Home() {
           ></path>
         </svg>
 
-        <Flex flexWrap='wrap' className='container' justifyContent='center'>
+        <Flex flexWrap='wrap' className='container ' justifyContent='center'>
           <Flex justifyContent='center' width='100%'>
             <Heading
               color='rgba(0, 0, 0, 0.7)'

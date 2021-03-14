@@ -13,7 +13,7 @@ import {
   Textarea,
   Button,
   Image,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import Head from 'next/head';
 
 import { Formik, Form, Field, ErrorMessage } from 'formik';

@@ -1,21 +1,12 @@
-import React from "react";
-import theme from "../../styles/theme";
-import {
-  ColorModeProvider,
-  CSSReset,
-  ThemeProvider as ChackraThemeProvider,
-} from "@chakra-ui/core";
-import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
+import React from 'react';
+import theme from '../../styles/theme';
+
+import { ChakraProvider } from '@chakra-ui/react';
 const ThemeContainer = ({ children }) => {
   return (
-    <ChackraThemeProvider theme={theme}>
-      <ColorModeProvider value="light">
-        <EmotionThemeProvider theme={{ theme }}>
-          <CSSReset />
-          {children}
-        </EmotionThemeProvider>
-      </ColorModeProvider>
-    </ChackraThemeProvider>
+    <ChakraProvider value='light' theme={theme}>
+      {children}
+    </ChakraProvider>
   );
 };
 

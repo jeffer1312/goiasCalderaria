@@ -1,5 +1,5 @@
 import ThemeContainer from '../contexts/theme/ThemeContainer';
-import { Flex, Grid, Text } from '@chakra-ui/core';
+import { Flex, Grid, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import './styles.css';
 import 'animate.css';
@@ -7,9 +7,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
 import Head from 'next/head';
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
+
 function MyApp({ Component, pageProps }) {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -28,6 +26,10 @@ function MyApp({ Component, pageProps }) {
             content='caldeiraria, inspeção, soldagens especiais, áçucar e álcool,  química, petroquímica,  siderurgia,  metalurgia  óleo e gás,  mineração,  geração de energia,  movimentação de carga,  alimentício,  biodiesel, Goias , Goiás Caldeiraria ,mineiros ,goias ,solda ,usina ,eth '
           />
           <meta name='author' content='Jefferson Felizardo' />
+          <meta
+            name='viewport'
+            content='width:device-width, initial-scale=1.0'
+          />
         </Head>
         <Grid
           as='main'

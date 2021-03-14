@@ -1,221 +1,162 @@
 //import Head from "next/head";
-import { Flex, Heading, List, ListItem, Text } from '@chakra-ui/core';
+import { useState } from 'react';
+import {
+  Flex,
+  Heading,
+  Modal,
+  Button,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Box,
+  Image as ImageChacra,
+} from '@chakra-ui/react';
 
-import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper';
+// import { useDisclosure } from '@chakra-ui/react';
 import Head from 'next/head';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import { imagens } from '../arquivosDb/images';
+import { ImgServicos } from '../arquivosDb/servicos';
 
-SwiperCore.use([Pagination]);
 function servicos() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [servicoModal, setServicoModal] = useState('');
+
+  function openModal(secao) {
+    setServicoModal(secao);
+    onOpen();
+  }
+
   return (
-    <Flex flexDirection='column' gridArea='content'>
-      <Head>
-        <title>Servicos - Goias Caldeiraria</title>
-        <meta
-          property='og:title'
-          content='Servicos - Goias Caldeiraria'
-          key='title'
-        />
-      </Head>
-      <Flex justifyContent='center'>
-        <Heading marginTop='60px' fontSize='6xl' color='rgb(130,130,130)'>
-          Produtos e Serviços
-        </Heading>
-      </Flex>
-      <Flex justifyContent='center'>
-        <div className='separator'></div>
-      </Flex>
-      <Flex
-        flexDirection='row'
-        justifyContent='center'
-        className='card-Services '
-      >
-        <Flex className='container' flexDirection='column'>
-          {/* itens */}
-          <Flex>
-            <Flex width='100%' flexDirection='column'>
-              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
-                Manutenção em implementos agricolas
-              </Heading>
-              <Text textAlign='start' paddingTop='3%' paddingLeft='10%'>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-              </Text>
-            </Flex>
-            <Flex width='35%'>
-              <Swiper
-                className='card-service-image'
-                slidesPerView={1}
-                autoplay
-                pagination={{ clickable: true }}
+    <>
+      <Modal isCentered={true} size='5xl' isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Galeria</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Flex justifyContent='center'>
+              <Flex
+                overflow='hidden'
+                position='relative'
+                flexDirection='column'
+                justifyContent='center'
               >
-                <SwiperSlide>
-                  <Image src='/teste1.jpg' alt='' width={600} height={350} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image src='/teste2.jpg' alt='' width={600} height={350} />
-                </SwiperSlide>
-              </Swiper>
+                <ImageGallery
+                  items={
+                    servicoModal === 'agricola'
+                      ? imagens.agricola
+                      : servicoModal === 'tubulacao'
+                      ? imagens.tubulacao
+                      : servicoModal === 'CAMINHAOBAU'
+                      ? imagens.CAMINHAOBAU
+                      : imagens.soldasgeral
+                  }
+                />
+              </Flex>
             </Flex>
-          </Flex>
-          {/* fim items */}
+          </ModalBody>
 
-          {/* itens */}
-          <Flex>
-            <Flex width='100%' flexDirection='column'>
-              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
-                Manutenção em implementos agricolas
-              </Heading>
-              <Text textAlign='start' paddingTop='3%' paddingLeft='10%'>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-              </Text>
-            </Flex>
-            <Flex width='35%'>
-              <Swiper
-                className='card-service-image'
-                slidesPerView={1}
-                autoplay
-                pagination={{ clickable: true }}
-              >
-                <SwiperSlide>
-                  <Image src='/teste1.jpg' alt='' width={600} height={350} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image src='/teste3.jpg' alt='' width={600} height={350} />
-                </SwiperSlide>
-              </Swiper>
-            </Flex>
-          </Flex>
-          {/* fim items */}
-          {/* itens */}
-          <Flex>
-            <Flex width='100%' flexDirection='column'>
-              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
-                Manutenção em implementos agricolas
-              </Heading>
-              <Text textAlign='start' paddingTop='3%' paddingLeft='10%'>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-              </Text>
-            </Flex>
-            <Flex width='35%'>
-              <Swiper
-                className='card-service-image'
-                slidesPerView={1}
-                autoplay
-                pagination={{ clickable: true }}
-              >
-                <SwiperSlide>
-                  <Image src='/teste1.jpg' alt='' width={600} height={350} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image src='/teste3.jpg' alt='' width={600} height={350} />
-                </SwiperSlide>
-              </Swiper>
-            </Flex>
-          </Flex>
-          {/* fim items */}
+          <ModalFooter>
+            <Button colorScheme='blue' onClick={onClose}>
+              Fechar
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
 
-          <Flex>
-            <Flex width='100%' flexDirection='column'>
-              <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
-                Manutenção em implementos agricolas
-              </Heading>
-              <Text textAlign='start' paddingTop='3%' paddingLeft='10%'>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-                <ListItem>teste</ListItem>
-              </Text>
-            </Flex>
-            <Flex width='35%'>
-              <Swiper
-                className='card-service-image'
-                slidesPerView={1}
-                autoplay
-                pagination={{ clickable: true }}
-              >
-                <SwiperSlide>
-                  <Image src='/teste1.jpg' alt='' width={600} height={350} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image src='/teste2.jpg' alt='' width={600} height={350} />
-                </SwiperSlide>
-              </Swiper>
+      <Flex flexDirection='column' gridArea='content'>
+        <Head>
+          <title>Servicos - Goias Caldeiraria</title>
+          <meta
+            property='og:title'
+            content='Servicos - Goias Caldeiraria'
+            key='title'
+          />
+        </Head>
+        <Flex justifyContent='center'>
+          <Heading marginTop='60px' fontSize='6xl' color='rgb(130,130,130)'>
+            Produtos e Serviços
+          </Heading>
+        </Flex>
+        <Flex justifyContent='center'>
+          <div className='separator'></div>
+        </Flex>
+
+        <Flex
+          flexDirection='row'
+          justifyContent='center'
+          className='card-Services '
+        >
+          <Flex className='container' flexDirection='column'>
+            <Flex flexWrap='wrap'>
+              {/* BOX */}
+              {ImgServicos.map(servico => {
+                return (
+                  <>
+                    <Flex
+                      className='box-galeria'
+                      key={servico.servico}
+                      width={{
+                        base: '100%',
+                        md: '100%',
+                        lg: '33%',
+                        xl: '31%',
+                      }}
+                      justifyContent='center'
+                      flexDirection='column'
+                    >
+                      <Box
+                        onClick={() => openModal(servico.servico)}
+                        borderWidth='1px'
+                        borderRadius='lg'
+                        overflow='hidden'
+                      >
+                        <ImageChacra src={servico.src} alt={servico.text} />
+
+                        <Box p='6'>
+                          <Box d='flex' alignItems='baseline'></Box>
+
+                          <Box
+                            mt='1'
+                            fontWeight='semibold'
+                            as='h4'
+                            lineHeight='tight'
+                            isTruncated
+                          >
+                            {servico.text}
+                          </Box>
+
+                          <Box>
+                            <Box as='span' color='gray.600' fontSize='sm'></Box>
+                          </Box>
+
+                          <Box d='flex' mt='2' alignItems='center'>
+                            <Box
+                              as='span'
+                              ml='2'
+                              color='gray.600'
+                              fontSize='sm'
+                            ></Box>
+                          </Box>
+                        </Box>
+                      </Box>
+                    </Flex>
+                  </>
+                );
+              })}
+              {/* BOX */}
+              {/* fim items */}
             </Flex>
           </Flex>
         </Flex>
       </Flex>
-    </Flex>
+    </>
   );
 }
 export default servicos;
-
-//  {/* servicos */}
-
-{
-  /* <Flex flexDirection="column" gridArea="servicos">
-<Flex justifyContent="center">
-  <Heading marginTop="60px" fontSize="6xl" color="rgb(130,130,130)">
-    Produtos e Serviços
-  </Heading>
-</Flex>
-<Flex justifyContent="center">
-  <div className="separator"></div>
-</Flex>
-
-<Flex
-  flexDirection="row"
-  justifyContent="center"
-  className="card-Services"
->
-  <Flex flexDirection="column">
-    <Heading textAlign="start" fontSize="2xl" paddingLeft="10%">
-      Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e
-      Tubulações
-    </Heading>
-    <Text textAlign="start" padding="10%">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Exercitationem, illum. Tempora expedita maiores animi ratione odit
-      ullam alias, nesciunt nostrum sint cupiditate repellendus ducimus
-      voluptatum quisquam, rerum iusto dolorum totam.
-    </Text>
-  </Flex>
-  <Flex width="35%">
-    <Swiper
-      className="card-service-image"
-      slidesPerView={1}
-      autoplay
-      pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide>
-        <img
-          src="/fabricação e monteagem de estrutura-metalica .jpg"
-          alt=""
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src="/fabricação e monteagem de estrutura-metalica .jpg"
-          alt=""
-        />
-      </SwiperSlide>
-      ...
-    </Swiper>
-  </Flex>     
-</Flex>
-</Flex>       */
-}

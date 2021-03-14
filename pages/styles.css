@@ -47,6 +47,7 @@ body {
 }
 .backgroundColor {
   background-color: #f2f2f2;
+
   /* background-color: #fff; */
   /*
    background-image: url('../public/fundo.png');
@@ -56,6 +57,21 @@ body {
 }
 .blueText {
   color: #1e91d6;
+}
+.box-galeria {
+  background-color: #ffffff;
+  padding: 1%;
+  margin: auto;
+}
+.image-gallery {
+}
+.image-gallery img {
+}
+.background-cliente {
+  background-image: url('../public/bg_01.png');
+  width: 100%;
+
+  background-size: cover;
 }
 .container {
   padding: 0 2%;

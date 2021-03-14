@@ -1,11 +1,8 @@
-import { Flex, Heading, Text, Image } from '@chakra-ui/core';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper';
+import { Flex, Heading, Text, Image } from '@chakra-ui/react';
+
 import { FaBriefcase, FaCheck } from 'react-icons/fa';
 import { BoxEmpresa } from '../arquivosDb/empresa';
 import Head from 'next/head';
-
-SwiperCore.use([Pagination]);
 
 export default function empresa() {
   return (
