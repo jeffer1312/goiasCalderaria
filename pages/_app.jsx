@@ -138,7 +138,7 @@ function MyApp({ Component, pageProps }) {
                     </li>
                     <li onClick={showSidebar}>
                       <Link href='/servicos' onClick={showSidebar}>
-                        Serviços
+                        Galeria
                       </Link>
                     </li>
                     <li onClick={showSidebar}>
