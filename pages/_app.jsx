@@ -104,7 +104,7 @@ function MyApp({ Component, pageProps }) {
                       <Link href='/empresa'>A Empresa</Link>
                     </li>
                     <li>
-                      <Link href='/servicos'>Serviços</Link>
+                      <Link href='/servicos'>Galeria</Link>
                     </li>
                     <li>
                       <Link href='/contato'>Contato</Link>

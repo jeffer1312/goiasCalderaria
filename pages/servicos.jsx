@@ -72,7 +72,7 @@ function servicos() {
 
       <Flex flexDirection='column' gridArea='content'>
         <Head>
-          <title>Servicos - Goias Caldeiraria</title>
+          <title>Galeria - Goias Caldeiraria</title>
           <meta
             property='og:title'
             content='Servicos - Goias Caldeiraria'
