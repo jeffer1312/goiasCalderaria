@@ -3,40 +3,28 @@ export const cardServicos = [
     key: '0',
     titulo: 'Manutenção industrial',
     icone: 'FaIndustry',
-    descricao: ` A manutenção industrial consiste num conjunto de práticas que
-    busca fiscalizar e manter instrumentos e máquinas em pleno
-    funcionamento. Além disso, é dever da manutenção evitar a
-    ocorrência de acidentes que afetem os colaboradores ou o
-    meio-ambiente. Isso significa que certos componentes vão
-    exigir maior cuidado que outros, como tubulações de gás
-    natural ou caldeiras industriais.`,
+    descricao: `A GOIAS CALDEIRARIA, realiza trabalhos de caldeiraria mediante projetos desenvolvidos por seus clientes, como por exemplo: trocadores de calor, tubulações, tanques, mesas alimentadora, dornas, torres de resfriamento, estrutura metálica, dentre outros.`,
     className: 'card-servicos  animate__animated animate__backInLeft',
   },
   {
     key: '1',
     titulo: 'Manutenção agrícola',
     icone: 'FaTractor',
-    descricao: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Repudiandae fugiat magnam odit esse pariatur nostrum facilis
-    ip.`,
+    descricao: `Realizamos todo tipo de Manutenção agrícola em equipamentos do tipo: Transbordo, roçadeira, hidrohal, subsolador, adubadora, uniport, colhedora, área de vivencia, caminhão baú oficina, trela canavieira dentre outros.`,
     className: 'card-servicos animate__animated animate__backInUp',
   },
   {
     key: '2',
     titulo: ' Caldeiraria',
     icone: 'FaFilter',
-    descricao: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Repudiandae fugiat magnam odit esse pariatur nostrum facilis
-    ip.`,
+    descricao: `Realizamos diversos tipos de serviços de caldeiraria com pessoal qualificados para elaboração de peças em alto nível com detalhamento e precisão.`,
     className: 'card-servicos animate__animated animate__backInUp',
   },
   {
     key: '3',
     titulo: ' Soldagens em geral',
     icone: 'FaFireAlt',
-    descricao: `Trabalhos de caldeiraria mediante projetos desenvolvidos
-    juntamente com seus clientes, como por exemplo: dispositivos,
-    trocadores de calor, tubulações, conexões, etc.`,
+    descricao: `Realizamos diversos tipos de Solda com pessoal treinado e qualificados em diversas áreas de atuação.`,
     className: 'card-servicos animate__animated animate__backInRight',
   },
 ];
@@ -44,14 +32,11 @@ export const cardServicos = [
 export const ProdServico = [
   {
     key: '0',
-    titulo: `Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e Tubulações`,
+    titulo: `Tanque Industrial`,
     orderImg: '1',
     orderText: '2',
     srcImg: '/tanque.jpg',
-    descricao: ` Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Exercitationem, illum. Tempora expedita maiores animi ratione odit
-    ullam alias, nesciunt nostrum sint cupiditate repellendus ducimus
-    voluptatum quisquam, rerum iusto dolorum totam.`,
+    descricao: ``,
     className: 'Image-servico',
   },
   {
@@ -60,35 +45,46 @@ export const ProdServico = [
     orderImg: '2',
     orderText: '1',
     srcImg: '/colhedora.jpg',
-    descricao: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Exercitationem, illum. Tempora expedita maiores animi ratione odit
-    ullam alias, nesciunt nostrum sint cupiditate repellendus ducimus
-    voluptatum quisquam, rerum iusto dolorum totam.`,
+    descricao: ``,
     className: 'Image-servico1',
   },
   {
     key: '2',
-    titulo: `Caldeiraria - Projeto e Fabricação de Estruturas Metálicas e Tubulações`,
+    titulo: `Manutenção em Trelas conjunto canavieiro`,
     orderImg: '1',
     srcImg: '/trela.png',
     orderText: '2',
-    descricao: ` Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Exercitationem, illum. Tempora expedita maiores animi ratione odit
-    ullam alias, nesciunt nostrum sint cupiditate repellendus ducimus
-    voluptatum quisquam, rerum iusto dolorum totam.`,
+    descricao: ``,
     className: 'Image-servico2',
   },
 ];
-
+export const HeaderText = [
+  {
+    key: '0',
+    text: 'Manutenção industrial',
+  },
+  {
+    key: '1',
+    text: 'Manutenção agrícola',
+  },
+  {
+    key: '2',
+    text: 'Caldeiraria',
+  },
+  {
+    key: '3',
+    text: 'Soldagens em geral',
+  },
+];
 export const Parceiros = [
   {
     key: '0',
     src: '/gafor.png',
     order: '0',
     background: '',
-    width: 1600,
+    width: 1000,
     height: 250,
-    base: '450px',
+    base: '800px',
     md: '400px',
     lg: '400px',
     xl: '600px',
@@ -100,11 +96,11 @@ export const Parceiros = [
     order: '1',
     background: '',
     width: 1000,
-    height: 300,
-    base: '250px',
-    md: '300px',
-    lg: '300px',
-    xl: '300px',
+    height: 250,
+    base: '800px',
+    md: '400px',
+    lg: '400px',
+    xl: '600px',
     alt: 'atvos',
   },
   {
@@ -112,12 +108,12 @@ export const Parceiros = [
     src: '/conlog.png',
     order: '2',
     background: '#c4302b',
-    width: 800,
-    height: 200,
-    base: '300px',
-    md: '300px',
-    lg: '300px',
-    xl: '300px',
+    width: 1000,
+    height: 250,
+    base: '800px',
+    md: '400px',
+    lg: '400px',
+    xl: '600px',
     alt: 'conlog',
   },
   {
@@ -125,12 +121,12 @@ export const Parceiros = [
     src: '/jsl.png',
     order: '3',
     background: '#c4302b',
-    width: 300,
-    height: 300,
-    base: '300px',
-    md: '300px',
-    lg: '300px',
-    xl: '300px',
+    width: 1000,
+    height: 250,
+    base: '800px',
+    md: '400px',
+    lg: '400px',
+    xl: '600px',
     alt: 'jsl',
   },
   {
@@ -138,9 +134,9 @@ export const Parceiros = [
     src: '/marfrig.svg',
     order: '4',
     background: '',
-    width: 200,
-    height: 300,
-    base: '450px',
+    width: 1000,
+    height: 250,
+    base: '800px',
     md: '400px',
     lg: '400px',
     xl: '600px',

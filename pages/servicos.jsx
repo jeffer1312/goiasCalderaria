@@ -70,7 +70,7 @@ function servicos() {
         </ModalContent>
       </Modal>
 
-      <Flex flexDirection='column' gridArea='content'>
+      <Flex paddingBottom='3%' flexDirection='column' gridArea='content'>
         <Head>
           <title>Servicos - Goias Caldeiraria</title>
           <meta

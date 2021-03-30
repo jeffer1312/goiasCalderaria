@@ -9,8 +9,16 @@ import {
 } from 'react-icons/fa';
 import Head from 'next/head';
 import Image from 'next/image';
-
-import { cardServicos, ProdServico, Parceiros } from '../arquivosDb/home.js';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay } from 'swiper/core';
+import {
+  cardServicos,
+  ProdServico,
+  Parceiros,
+  HeaderText,
+} from '../arquivosDb/home.js';
+import { motion } from 'framer-motion';
+SwiperCore.use([Autoplay]);
 export default function Home() {
   return (
     <>
@@ -43,6 +51,7 @@ export default function Home() {
             alignContent='center'
             justifyContent='center'
             justifyItems='center'
+            className='headerDescription'
           >
             <Heading
               color='white'
@@ -58,7 +67,32 @@ export default function Home() {
               </p>
               <ul>
                 <List>
-                  <Flex className='animate__animated animate__bounceInLeft animate__delay-1s'>
+                  {HeaderText.map(header => {
+                    return (
+                      <Flex
+                        key={header.key}
+                        className='animate__animated animate__bounceInLeft animate__delay-1s'
+                      >
+                        <Flex flexDirection='column' justifyContent='center'>
+                          <FaCheck fontSize='3.3rem' className='IconContent' />
+                        </Flex>
+                        <Flex flexDirection='column' justifyContent='center'>
+                          <Text
+                            padding='8px 10px'
+                            fontSize={{
+                              base: '1.4rem',
+                              md: '1.5rem',
+                              lg: '1.8rem',
+                              xl: '2.2rem',
+                            }}
+                          >
+                            <span className='textContent '>{header.text}</span>
+                          </Text>
+                        </Flex>
+                      </Flex>
+                    );
+                  })}
+                  {/* <Flex className='animate__animated animate__bounceInLeft animate__delay-1s'>
                     <Flex flexDirection='column' justifyContent='center'>
                       <FaCheck fontSize='3.3rem' className='IconContent' />
                     </Flex>
@@ -137,7 +171,7 @@ export default function Home() {
                         <span className='textContent'>Soldagens em geral</span>
                       </Text>
                     </Flex>
-                  </Flex>
+                  </Flex> */}
                 </List>
               </ul>
             </Heading>
@@ -164,17 +198,17 @@ export default function Home() {
                   base: '100%',
                   md: '48%',
                   lg: '25%',
-                  xl: '25%',
+                  xl: '28%',
                 }}
                 key={card.key}
-                height='450px'
+                height='380px'
                 justifyContent='center'
                 className={card.className}
               >
                 <Flex flexDirection='column'>
                   <Flex justifyContent='center'>
                     <Text
-                      padding='10% 0'
+                      padding='8% 0'
                       fontSize={{
                         base: '3rem',
                         md: '1rem',
@@ -226,7 +260,7 @@ export default function Home() {
             marginTop='60px'
             fontSize='6xl'
           >
-            Produtos e Serviços
+            Alguns dos nossos Serviços
           </Heading>
         </Flex>
         <Flex justifyContent='center'>
@@ -289,12 +323,9 @@ export default function Home() {
                 }}
                 className='servicos-text '
               >
-                <Heading textAlign='start' fontSize='2xl' paddingLeft='10%'>
+                <Heading textAlign='center' fontSize='2xl' paddingLeft='10%'>
                   {servico.titulo}
                 </Heading>
-                <Text textAlign='start' padding='10%'>
-                  {servico.descricao}
-                </Text>
               </Flex>
             </Flex>
           );
@@ -320,43 +351,43 @@ export default function Home() {
               Nossos Clientes
             </Heading>
           </Flex>
-
-          {Parceiros.map(parceiro => {
-            return (
-              <Flex
-                order={parceiro.order}
-                key={parceiro.key}
-                width={{
-                  base: '100%',
-                  md: '50%',
-                  lg: '50%',
-                  xl: '50%',
-                }}
-                justifyContent='center'
-                padding='5%'
-                height={parceiro.height}
-              >
-                <Flex
-                  width={{
-                    base: parceiro.base,
-                    md: parceiro.md,
-                    lg: parceiro.lg,
-                    xl: parceiro.xl,
-                  }}
-                  flexDirection='column'
-                  justifyContent='center'
-                  backgroundColor={parceiro.background}
-                >
-                  <Image
-                    width={parceiro.width}
-                    height={parceiro.height}
-                    src={parceiro.src}
-                    alt={parceiro.alt}
-                  />
-                </Flex>
-              </Flex>
-            );
-          })}
+          <Flex paddingTop='3%' width='80%'>
+            <Swiper spaceBetween={100} slidesPerView={3} autoplay>
+              {Parceiros.map(parceiro => {
+                return (
+                  <Flex
+                    flexDirection='column'
+                    justifyContent='center'
+                    key={parceiro.key}
+                  >
+                    <SwiperSlide key={parceiro.key}>
+                      <Flex>
+                        <Flex
+                          order={parceiro.order}
+                          width={{
+                            base: parceiro.base,
+                            md: parceiro.md,
+                            lg: parceiro.lg,
+                            xl: parceiro.xl,
+                          }}
+                          justifyContent='center'
+                          flexDirection='column'
+                          backgroundColor={parceiro.background}
+                        >
+                          <Image
+                            width={parceiro.width}
+                            height={parceiro.height}
+                            src={parceiro.src}
+                            alt={parceiro.alt}
+                          />
+                        </Flex>
+                      </Flex>
+                    </SwiperSlide>
+                  </Flex>
+                );
+              })}
+            </Swiper>
+          </Flex>
         </Flex>
       </Flex>
     </>

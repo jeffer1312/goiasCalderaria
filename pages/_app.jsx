@@ -3,15 +3,36 @@ import { Flex, Grid, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import './styles.css';
 import 'animate.css';
+import 'swiper/swiper.scss';
 import { useState } from 'react';
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
 import Head from 'next/head';
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaInstagram,
+  FaEnvelope,
+  FaMobileAlt,
+} from 'react-icons/fa';
 
+import { motion } from 'framer-motion';
 function MyApp({ Component, pageProps }) {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
+  const handleWhatsapp = () => {
+    window.open('https://api.whatsapp.com/send?phone=5564996187103', '_blank');
+  };
+  const handleLink = redesocial => {
+    if (redesocial === 'FaFacebook') {
+      window.open('https://www.facebook.com/goiascaldeiraria', '_blank');
+    } else if (redesocial === 'FaLinkedin') {
+      window.open('https://www.linkedin.com/', '_blank');
+    } else {
+      window.open('https://www.instagram.com/', '_blank');
+    }
+  };
   return (
     <ThemeContainer>
       <Flex flexDirection='column' className='backgroundColor'>
@@ -27,7 +48,7 @@ function MyApp({ Component, pageProps }) {
           />
           <meta
             name='keywords'
-            content='caldeiraria, inspeção, soldagens especiais, áçucar e álcool,  química, petroquímica,  siderurgia,  metalurgia  óleo e gás,  mineração,  geração de energia,  movimentação de carga,  alimentício,  biodiesel, Goias , Goiás Caldeiraria ,mineiros ,goias ,solda ,usina ,eth '
+            content='caldeiraria, inspeção, soldagens especiais, áçucar e álcool,  química, petroquímica,  siderurgia,  metalurgia  óleo e gás,  mineração,  geração de energia,  movimentação de carga,  alimentício,  biodiesel, Goias , Goiás Caldeiraria ,mineiros ,goias ,solda ,usina ,eth,Caldeiraria industrial, caldeiraria,industrial,GOIAS CALDEIRARIA, GOIAS CALDEIRARIAS,CALDEIRARIAS, SOLDAS, manutençao agricola,interior,marfrig,atvos,tubulação,maquinario agricola '
           />
           <meta name='author' content='Jefferson Felizardo' />
         </Head>
@@ -155,41 +176,240 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
 
           <Flex
-            width=''
-            justifyContent='center'
+            justifyContent={{
+              base: 'flex-start',
+              md: 'center',
+              lg: 'center',
+              xl: 'center',
+            }}
+            paddingTop={{
+              base: '8%',
+              md: '0%',
+              lg: '0%',
+              xl: '0%',
+            }}
             flexDirection='column'
             gridArea='footer'
-            backgroundColor='#fff'
-            borderTop='1px solid #ccc'
-            // backgroundColor='#129e38'
+            position='relative'
+            backgroundColor='#030027'
+            height={{
+              base: '300px',
+              md: '200px',
+              lg: '200px',
+              xl: '200px',
+            }}
+            width='100%'
           >
-            <Flex justifyContent='center' className='logoFooter'>
+            <Flex flexWrap='wrap'>
               <Flex
+                fontFamily='Akaya Telivigala'
                 width={{
-                  base: '370px',
-                  md: '400px',
-                  lg: '500px',
-                  xl: '500px',
+                  base: '100%',
+                  md: '48%',
+                  lg: '48%',
+                  xl: '33%',
                 }}
-                flexDirection='column'
-                justifyContent='center'
+                justifyContent='start'
               >
-                <Image
-                  width={500}
-                  height={300}
-                  src='/logo.png'
-                  alt='Goias Caldeiraria'
-                />
+                <Flex
+                  flex='1'
+                  color='#fff'
+                  className='infoFooter'
+                  flexDirection='column'
+                >
+                  {/* <Flex paddingLeft='5%'>
+                    <Text></Text>
+                  </Flex> */}
+                  <Flex paddingLeft='2%'>
+                    <Flex flexDirection='column' justifyContent='center'>
+                      <FaEnvelope
+                        fontSize={{
+                          base: '1rem',
+                          md: '0.9rem',
+                          lg: '0.9rem',
+                          xl: '1rem',
+                        }}
+                      />
+                    </Flex>
+                    <Flex
+                      marginLeft='1%'
+                      fontSize={{
+                        base: '1rem',
+                        md: '0.9rem',
+                        lg: '0.9rem',
+                        xl: '1rem',
+                      }}
+                      flexDirection='column'
+                      justifyContent='center'
+                    >
+                      <Text fontWeight='normal'>goias.montagem@gmail.com</Text>
+                    </Flex>
+                  </Flex>
+
+                  <Flex paddingLeft='2%'>
+                    <Flex flexDirection='column' justifyContent='center'>
+                      <FaMobileAlt fontSize='1rem' />
+                    </Flex>
+                    <Flex
+                      marginLeft='1%'
+                      fontSize='1rem'
+                      flexDirection='column'
+                      justifyContent='center'
+                    >
+                      <Text fontWeight='normal'>
+                        (64)99618-7103 - Leane Neves Lima - Administrativo{' '}
+                      </Text>
+                    </Flex>
+                  </Flex>
+                  <Flex paddingLeft='2%'>
+                    <Flex flexDirection='column' justifyContent='center'>
+                      <FaMobileAlt
+                        fontSize={{
+                          base: '1rem',
+                          md: '0.8rem',
+                          lg: '0.8rem',
+                          xl: '1rem',
+                        }}
+                      />
+                    </Flex>
+                    <Flex
+                      marginLeft='1%'
+                      fontSize='1rem'
+                      flexDirection='column'
+                      justifyContent='center'
+                    >
+                      <Text
+                        fontSize={{
+                          base: '1rem',
+                          md: '0.8rem',
+                          lg: '0.8rem',
+                          xl: '1rem',
+                        }}
+                        fontWeight='normal'
+                      >
+                        (64)99342-7147 - Sergio Reis Rego Costa -
+                        Manutenção/Operacional
+                      </Text>
+                    </Flex>
+                  </Flex>
+                </Flex>
+              </Flex>
+
+              <Flex
+                justifyContent={{
+                  base: 'flex-start',
+                  md: 'center',
+                  lg: 'center',
+                  xl: 'center',
+                }}
+                width={{
+                  base: '100%',
+                  md: '33%',
+                  lg: '33%',
+                  xl: '33%',
+                }}
+              >
+                <Flex
+                  onClick={() => handleLink('FaFacebook')}
+                  cursor='pointer'
+                  padding='2%'
+                >
+                  <FaFacebook fontSize='3rem' color='#fff' />
+                </Flex>
+                <Flex
+                  onClick={() => handleLink('FaLinkedin')}
+                  cursor='pointer'
+                  padding='2%'
+                >
+                  <FaLinkedin fontSize='3rem' color='#fff' />
+                </Flex>
+                <Flex
+                  cursor='pointer'
+                  onClick={() => handleLink('FaInstagram')}
+                  padding='2%'
+                >
+                  <FaInstagram fontSize='3rem' color='#fff' />
+                </Flex>
               </Flex>
             </Flex>
-            <Flex justifyContent='center'>
-              <Flex color='#000' className='infoFooter' flexDirection='column'>
-                <Text>(64)99618-7103 / (64)99342-7147</Text>
-                <Text>goias.montagem@gmail.com</Text>
+
+            <Flex gridArea='footer' justifyContent='center'>
+              <Flex
+                bottom='0'
+                position='absolute'
+                justifyContent='center'
+                color='#fff'
+                className='author'
+              >
+                <Text fontFamily='Akaya Telivigala'>
+                  Desenvolvido por: Jefferson Felizardo
+                </Text>
               </Flex>
             </Flex>
           </Flex>
         </Grid>
+      </Flex>
+      <Flex
+        onClick={handleWhatsapp}
+        cursor='pointer'
+        position='fixed'
+        right='10'
+        bottom='10'
+        className='whatsappfixed'
+      >
+        <motion.div
+          initial={{ rotate: 360, scale: 0 }}
+          animate={{ rotate: 0, scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 260,
+            damping: 20,
+          }}
+        >
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <Flex>
+              <Flex
+                backgroundColor='#16DB65'
+                //backgroundColor='#236938'
+                justifyContent='center'
+                flexDirection='column'
+                borderRadius='15px'
+                margin='auto'
+                marginRight='-20px'
+                justifyContent='center'
+                width={{
+                  base: '68%',
+                  md: '70%',
+                  lg: '80%',
+                  xl: '80%',
+                }}
+              >
+                <Flex
+                  margin='auto'
+                  width={{
+                    base: '68%',
+                    md: '70%',
+                    lg: '80%',
+                    xl: '80%',
+                  }}
+                >
+                  <Text
+                    fontFamily='Akaya Telivigala'
+                    className='whatsappmsg'
+                    fontSize='1.1rem'
+                    textAlign='center'
+                    color='#ffffff'
+                    _hover=''
+                  >
+                    Clique aqui e nos envie uma mensagem
+                  </Text>
+                </Flex>
+              </Flex>
+
+              <Image src='/whatsapp.png' width='75' height='75' />
+            </Flex>
+          </motion.button>
+        </motion.div>
       </Flex>
     </ThemeContainer>
   );
