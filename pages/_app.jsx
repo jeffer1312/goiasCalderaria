@@ -37,11 +37,11 @@ function MyApp({ Component, pageProps }) {
     <ThemeContainer>
       <Flex flexDirection='column' className='backgroundColor'>
         <Head>
+          <meta name="google-site-verification" content="lpuVKAkgriICCXLt5AmS_415e2D00ACjUHGciJLLNKg" />
           <meta
             name='viewport'
             content='width=device-width, initial-scale=1.0'
           />
-          <meta name="google-site-verification" content="lpuVKAkgriICCXLt5AmS_415e2D00ACjUHGciJLLNKg" />
           <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
           <meta
             name='description'
