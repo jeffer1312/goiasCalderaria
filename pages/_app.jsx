@@ -125,7 +125,7 @@ function MyApp({ Component, pageProps }) {
                       <Link href='/empresa'>A Empresa</Link>
                     </li>
                     <li>
-                      <Link href='/servicos'>Serviços</Link>
+                      <Link href='/servicos'>Galeria</Link>
                     </li>
                     <li>
                       <Link href='/contato'>Contato</Link>
@@ -159,7 +159,7 @@ function MyApp({ Component, pageProps }) {
                     </li>
                     <li onClick={showSidebar}>
                       <Link href='/servicos' onClick={showSidebar}>
-                        Serviços
+                        Galeria
                       </Link>
                     </li>
                     <li onClick={showSidebar}>

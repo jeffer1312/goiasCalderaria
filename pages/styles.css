@@ -417,11 +417,6 @@ body {
   }
 }
 
-@media (max-width: 800px) {
-  .whatsappfixed {
-  }
-}
-
 @media (min-width: 1200px) {
   .card-servicos:hover {
     border-radius: 10px;
