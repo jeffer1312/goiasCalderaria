@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
     if (redesocial === 'FaFacebook') {
       window.open('https://www.facebook.com/goiascaldeiraria', '_blank');
     } else if (redesocial === 'FaLinkedin') {
-      window.open('https://www.linkedin.com/', '_blank');
+      window.open('https://www.linkedin.com/in/goi%C3%A1s-caldeiraria-643892204/', '_blank');
     } else {
       window.open('https://www.instagram.com/', '_blank');
     }
