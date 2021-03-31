@@ -358,15 +358,7 @@ function MyApp({ Component, pageProps }) {
                 >
                   <FaLinkedin fontSize='3rem' color='#fff' />
                 </Flex>
-                <Flex
-                  flexDirection='column'
-                  justifyContent='center'
-                  cursor='pointer'
-                  onClick={() => handleLink('FaInstagram')}
-                  padding='2%'
-                >
-                  <FaInstagram fontSize='3rem' color='#fff' />
-                </Flex>
+           
               </Flex>
             </Flex>
 
