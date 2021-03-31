@@ -37,7 +37,10 @@ function MyApp({ Component, pageProps }) {
     <ThemeContainer>
       <Flex flexDirection='column' className='backgroundColor'>
         <Head>
-          <meta name="google-site-verification" content="lpuVKAkgriICCXLt5AmS_415e2D00ACjUHGciJLLNKg" />
+          <meta
+            name='google-site-verification'
+            content='lpuVKAkgriICCXLt5AmS_415e2D00ACjUHGciJLLNKg'
+          />
           <meta
             name='viewport'
             content='width=device-width, initial-scale=1.0'
@@ -194,10 +197,10 @@ function MyApp({ Component, pageProps }) {
             position='relative'
             backgroundColor='#030027'
             height={{
-              base: '300px',
-              md: '200px',
-              lg: '200px',
-              xl: '200px',
+              base: '350px',
+              md: '230px',
+              lg: '230px',
+              xl: '230px',
             }}
             width='100%'
           >
@@ -218,11 +221,30 @@ function MyApp({ Component, pageProps }) {
                   className='infoFooter'
                   flexDirection='column'
                 >
-                  {/* <Flex paddingLeft='5%'>
-                    <Text></Text>
-                  </Flex> */}
+                  <Flex
+                    paddingLeft='2%'
+                    width={{
+                      base: '250px',
+                      md: '400px',
+                      lg: '400px',
+                      xl: '400px',
+                    }}
+                    flexDirection='column'
+                    justifyContent='center'
+                  >
+                    <Image
+                      width={550}
+                      height={160}
+                      src='/logobranca.png'
+                      alt='Goias Caldeiraria'
+                    />
+                  </Flex>
                   <Flex paddingLeft='2%'>
-                    <Flex flexDirection='column' justifyContent='center'>
+                    <Flex
+                      paddingLeft='2%'
+                      flexDirection='column'
+                      justifyContent='center'
+                    >
                       <FaEnvelope
                         fontSize={{
                           base: '1rem',
@@ -248,7 +270,11 @@ function MyApp({ Component, pageProps }) {
                   </Flex>
 
                   <Flex paddingLeft='2%'>
-                    <Flex flexDirection='column' justifyContent='center'>
+                    <Flex
+                      paddingLeft='2%'
+                      flexDirection='column'
+                      justifyContent='center'
+                    >
                       <FaMobileAlt fontSize='1rem' />
                     </Flex>
                     <Flex
@@ -263,7 +289,11 @@ function MyApp({ Component, pageProps }) {
                     </Flex>
                   </Flex>
                   <Flex paddingLeft='2%'>
-                    <Flex flexDirection='column' justifyContent='center'>
+                    <Flex
+                      paddingLeft='2%'
+                      flexDirection='column'
+                      justifyContent='center'
+                    >
                       <FaMobileAlt
                         fontSize={{
                           base: '1rem',
@@ -311,6 +341,8 @@ function MyApp({ Component, pageProps }) {
                 }}
               >
                 <Flex
+                  flexDirection='column'
+                  justifyContent='center'
                   onClick={() => handleLink('FaFacebook')}
                   cursor='pointer'
                   padding='2%'
@@ -318,6 +350,8 @@ function MyApp({ Component, pageProps }) {
                   <FaFacebook fontSize='3rem' color='#fff' />
                 </Flex>
                 <Flex
+                  flexDirection='column'
+                  justifyContent='center'
                   onClick={() => handleLink('FaLinkedin')}
                   cursor='pointer'
                   padding='2%'
@@ -325,6 +359,8 @@ function MyApp({ Component, pageProps }) {
                   <FaLinkedin fontSize='3rem' color='#fff' />
                 </Flex>
                 <Flex
+                  flexDirection='column'
+                  justifyContent='center'
                   cursor='pointer'
                   onClick={() => handleLink('FaInstagram')}
                   padding='2%'
